@@ -1,0 +1,30 @@
+
+{
+  "version":"0.2.0",
+  "configurations": [
+    {
+      "name": "Launch via NPM",
+      "request": "launch",
+      "runtimeArgs": [
+        "run-script",
+        "debug"
+      ],
+      "runtimeExecutable": "npm",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+
+    
+      {
+          "type": "node",
+          "request": "launch",
+          "name": "Debug Nest Framework",
+          "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+          "args": ["${workspaceFolder}/src/main.ts"],
+          "autoAttachChildProcesses": true 
+      }
+  ]
+}
+
