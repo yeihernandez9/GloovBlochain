@@ -44,7 +44,7 @@ export class WithdrawalsUseCases {
         throw new NotFoundException("No se puede enviar a las mismas billeteras");
       }
     } else {
-      throw new NotFoundException("No se permiten transaccione en CEROS");
+      throw new NotFoundException("No se permiten transacciones en CEROS");
     }
 
   }

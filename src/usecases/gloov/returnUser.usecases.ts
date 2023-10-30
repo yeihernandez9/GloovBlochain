@@ -40,7 +40,7 @@ export class ReturnUserUseCases {
           throw new NotFoundException(`No tiene balance `);
         }
       } else {
-        throw new NotFoundException("No se permiten transaccione en CEROS");
+        throw new NotFoundException("No se permiten transacciones en CEROS");
       }
     } else {
 

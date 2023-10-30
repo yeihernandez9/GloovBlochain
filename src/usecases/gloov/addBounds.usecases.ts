@@ -39,7 +39,7 @@ export class AddBoundsUseCases {
         throw new NotFoundException("no tiene balance");
       }
     } else {
-      throw new NotFoundException("No se permiten transaccione en CEROS");
+      throw new NotFoundException("No se permiten transacciones en CEROS");
     }
 
   }
