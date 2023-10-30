@@ -18,26 +18,31 @@ export class CashReturnUseCases {
     const addressReturnAccount = await this.blockchainService.getAddressPublic(pkReturnAccount, this.ws);
     const balance = await this.blockchainService.balances(address, this.ws);
     this.logger.log('CashReturnUseCases execute', `address: ${address}, balance: ${balance}`);
-    if (balance >= 0 && value <= balance && value != 0) {
-      this.logger.log('CashReturnUseCases execute', `se puede hacer la tansaccinos `);
-      const convertWei = await this.blockchainService.convertEtherToWei(value, this.ws);
-      const nonce = await this.blockchainService.getnonce(address, this.ws);
-      this.logger.log('CashReturnUseCases execute', `nonce: ${nonce}`);
-      const transaction = await this.blockchainService.transaction(
-        address,
-        nonce,
-        addressReturnAccount,
-        convertWei,
-        '21000',
-        '0',
-        pkAccountReturn,
-        this.ws,
-      );
-      this.logger.log('CashReturnUseCases execute', `Transaction hash: ${transaction.transactionHash}`);
-      return transaction.transactionHash;
+    if (value != 0) {
+      if (balance >= 0 && value <= balance) {
+        this.logger.log('CashReturnUseCases execute', `se puede hacer la tansaccinos `);
+        const convertWei = await this.blockchainService.convertEtherToWei(value, this.ws);
+        const nonce = await this.blockchainService.getnonce(address, this.ws);
+        this.logger.log('CashReturnUseCases execute', `nonce: ${nonce}`);
+        const transaction = await this.blockchainService.transaction(
+          address,
+          nonce,
+          addressReturnAccount,
+          convertWei,
+          '21000',
+          '0',
+          pkAccountReturn,
+          this.ws,
+        );
+        this.logger.log('CashReturnUseCases execute', `Transaction hash: ${transaction.transactionHash}`);
+        return transaction.transactionHash;
+      } else {
+        this.logger.log('CashReturnUseCases execute', `no tiene balance `);
+        throw new NotFoundException("no tiene balance");
+      }
     } else {
-      this.logger.log('CashReturnUseCases execute', `no tiene balance `);
-      throw new NotFoundException("no tiene balance");
+      throw new NotFoundException("No se permiten transaccione en CEROS");
     }
+
   }
 }

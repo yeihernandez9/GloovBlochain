@@ -18,26 +18,31 @@ export class AddTokensBondsUseCases {
     const addressDestiny = await this.blockchainService.getAddressPublic(pkBondAcount, this.ws);
     const balance = await this.blockchainService.balances(address, this.ws);
     this.logger.log('AddTokensBondsUseCases execute', `address: ${address}, balance: ${balance}`);
-    if (balance >= 0 && value <= balance && value != 0) {
-      this.logger.log('AddTokensBondsUseCases execute', `se puede hacer la tansaccinos `);
-      const convertWei = await this.blockchainService.convertEtherToWei(value, this.ws);
-      const nonce = await this.blockchainService.getnonce(address, this.ws);
-      this.logger.log('AddTokensBondsUseCases execute', `nonce: ${nonce}`);
-      const transaction = await this.blockchainService.transaction(
-        address,
-        nonce,
-        addressDestiny,
-        convertWei,
-        '21000',
-        '0',
-        pkMaster,
-        this.ws,
-      );
-      this.logger.log('AddTokensBondsUseCases execute', `Transaction hash: ${transaction.transactionHash}`);
-      return transaction.transactionHash;
+    if (value != 0) {
+      if (balance >= 0 && value <= balance) {
+        this.logger.log('AddTokensBondsUseCases execute', `se puede hacer la tansaccinos `);
+        const convertWei = await this.blockchainService.convertEtherToWei(value, this.ws);
+        const nonce = await this.blockchainService.getnonce(address, this.ws);
+        this.logger.log('AddTokensBondsUseCases execute', `nonce: ${nonce}`);
+        const transaction = await this.blockchainService.transaction(
+          address,
+          nonce,
+          addressDestiny,
+          convertWei,
+          '21000',
+          '0',
+          pkMaster,
+          this.ws,
+        );
+        this.logger.log('AddTokensBondsUseCases execute', `Transaction hash: ${transaction.transactionHash}`);
+        return transaction.transactionHash;
+      } else {
+        this.logger.log('AddTokensBondsUseCases execute', `no tiene balance `);
+        throw new NotFoundException("no tiene balance");
+      }
     } else {
-      this.logger.log('AddTokensBondsUseCases execute', `no tiene balance `);
-      throw new NotFoundException("no tiene balance");
+      throw new NotFoundException("No se permiten transaccione en CEROS");
     }
+
   }
 }
