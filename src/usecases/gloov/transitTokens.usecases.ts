@@ -139,13 +139,13 @@ export class TransitTokensUseCases {
 
     const total = await this.processListOr(toAddress, toAddress, fBlock, tBlock, txs);
 
-    const valPreSend = await (this.evalueList(env, toBlock));
+    const valPreSend = await (this.evalueList(env, tBlock));
 
-    const value = await this.evalueList(resp, toBlock);
+    const value = await this.evalueList(resp, tBlock);
 
-    const valPreSend2 = new BigNumber(await this.evalueList2(env, toBlock));
+    const valPreSend2 = new BigNumber(await this.evalueList2(env, tBlock));
 
-    const value2 = new BigNumber(await this.evalueList2(resp, toBlock));
+    const value2 = new BigNumber(await this.evalueList2(resp, tBlock));
     const ball = bal - value2 + valPreSend2 - prevTra;
 
     const bal1 = new Big(bal); // Reemplaza con el valor de bal
@@ -269,6 +269,7 @@ export class TransitTokensUseCases {
   }
 
   async processList(from: string, to: string, fBlock: number, toBlock: number, resp: any): Promise<any> {
+
     const filteredTxs = [];
 
     for (const x of resp) {
@@ -289,14 +290,17 @@ export class TransitTokensUseCases {
 
 
   async processListOr(from: string, to: string, fBlock: number, toBlock: any, txs: any) {
+
     const filteredTxs = [];
 
     for (const x of txs) {
+      let fromAddress = "0x" + await this.bytesToHex(x.fromAddressHash);
+      let toAddress = "0x" + await this.bytesToHex(x.toAddressHash);
       if (
-        x.blockNumber <= toBlock &&
-        x.blockNumber >= fBlock &&
-        ("0x" + await this.bytesToHex(x.fromAddressHash)).toLowerCase() === (from !== null ? from : "0x" + await this.bytesToHex(x.fromAddressHash)).toLowerCase() ||
-        ("0x" + await this.bytesToHex(x.toAddressHash)).toLowerCase() === (to !== null ? to : "0x" + await this.bytesToHex(x.toAddressHash)).toLowerCase()
+        parseInt(x.blockNumber) <= toBlock &&
+        parseInt(x.blockNumber) >= fBlock &&
+        (fromAddress.toLowerCase() === (from ? from.toLowerCase() : fromAddress.toLowerCase()) ||
+          toAddress.toLowerCase() === (to ? to.toLowerCase() : toAddress.toLowerCase()))
       ) {
         filteredTxs.push(x);
       }
