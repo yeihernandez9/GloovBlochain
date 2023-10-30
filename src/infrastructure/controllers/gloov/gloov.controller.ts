@@ -81,7 +81,7 @@ export class GloovController {
   async createAccount() {
     const account = await this.createAccountUsecaseProxy.getInstance().execute();
     const response = new createAccountPresenter();
-    response.address = account.address;
+    response.publicKey = account.address;
     response.privateKey = account.privateKey;
     return response;
   }

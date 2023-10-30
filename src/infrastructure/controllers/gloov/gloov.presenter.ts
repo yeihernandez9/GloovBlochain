@@ -6,7 +6,7 @@ export class IsGloovBalancePresenter {
 
 export class createAccountPresenter {
   @ApiProperty()
-  address: string;
+  publicKey: string;
 
   @ApiProperty()
   privateKey: string;
