@@ -17,7 +17,7 @@ export class AddTokensChargeBackUseCases {
     const addressChargeBack = await this.blockchainService.getAddressPublic(pkTokensCharge, this.ws);
     const balance = await this.blockchainService.balances(address, this.ws);
     this.logger.log('AddTokensChargeBackUseCases execute', `address: ${address}, balance: ${balance}`);
-    if (balance >= 0 && value <= balance) {
+    if (balance >= 0 && value <= balance && value != 0) {
       this.logger.log('AddTokensChargeBackUseCases execute', `se puede hacer la tansaccinos `);
       const convertWei = await this.blockchainService.convertEtherToWei(value, this.ws);
       const nonce = await this.blockchainService.getnonce(address, this.ws);

@@ -18,7 +18,7 @@ export class CashReturnUseCases {
     const addressReturnAccount = await this.blockchainService.getAddressPublic(pkReturnAccount, this.ws);
     const balance = await this.blockchainService.balances(address, this.ws);
     this.logger.log('CashReturnUseCases execute', `address: ${address}, balance: ${balance}`);
-    if (balance >= 0 && value <= balance) {
+    if (balance >= 0 && value <= balance && value != 0) {
       this.logger.log('CashReturnUseCases execute', `se puede hacer la tansaccinos `);
       const convertWei = await this.blockchainService.convertEtherToWei(value, this.ws);
       const nonce = await this.blockchainService.getnonce(address, this.ws);
