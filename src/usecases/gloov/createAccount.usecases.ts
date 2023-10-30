@@ -1,13 +1,14 @@
 import { GloovConfig } from './../../domain/web3/gloov.interface';
 import { ILogger } from '../../domain/logger/logger.interface';
 import { IBlockchainService } from '../../domain/adapters/blockchain.interface';
+import { NotFoundException } from '@nestjs/common';
 
 export class CreateAccountUseCases {
   constructor(
     private readonly gloovConfig: GloovConfig,
     private readonly logger: ILogger,
     private readonly blockchainService: IBlockchainService,
-  ) {}
+  ) { }
 
   async execute(): Promise<any> {
     try {
@@ -17,7 +18,7 @@ export class CreateAccountUseCases {
       return account;
     } catch (error) {
       this.logger.error('Error create account:', error);
-      return error;
+      throw new NotFoundException("No se puede crear billetera");
     }
   }
 }

@@ -14,7 +14,7 @@ class AddBoundsUseCases {
         const address = await this.blockchainService.getAddressPublic(pkBondAcount, this.ws);
         const balance = await this.blockchainService.balances(address, this.ws);
         this.logger.log('AddTokensUseCases execute', `address: ${address}, balance: ${balance}`);
-        if (balance > 0 && value <= balance) {
+        if (balance >= 0 && value <= balance) {
             this.logger.log('AddTokensUseCases execute', `se puede hacer la tansaccinos `);
             const convertWei = await this.blockchainService.convertEtherToWei(value, this.ws);
             const nonce = await this.blockchainService.getnonce(address, this.ws);
@@ -25,7 +25,7 @@ class AddBoundsUseCases {
         }
         else {
             this.logger.log('AddTokensUseCases execute', `no tiene balance `);
-            throw new common_1.NotFoundException();
+            throw new common_1.NotFoundException("no tiene balance");
         }
     }
 }

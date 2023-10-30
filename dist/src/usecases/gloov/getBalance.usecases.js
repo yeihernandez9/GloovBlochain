@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetBalanceUseCases = void 0;
+const common_1 = require("@nestjs/common");
 class GetBalanceUseCases {
     constructor(gloovConfig, logger, blockchainService) {
         this.gloovConfig = gloovConfig;
@@ -16,7 +17,7 @@ class GetBalanceUseCases {
         }
         catch (error) {
             this.logger.error('Error al obtener el balance:', error);
-            return error;
+            throw new common_1.NotFoundException("Error al obtener el balance:" + error);
         }
     }
 }

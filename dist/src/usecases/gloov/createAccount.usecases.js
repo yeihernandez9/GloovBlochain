@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateAccountUseCases = void 0;
+const common_1 = require("@nestjs/common");
 class CreateAccountUseCases {
     constructor(gloovConfig, logger, blockchainService) {
         this.gloovConfig = gloovConfig;
@@ -16,7 +17,7 @@ class CreateAccountUseCases {
         }
         catch (error) {
             this.logger.error('Error create account:', error);
-            return error;
+            throw new common_1.NotFoundException("No se puede crear billetera");
         }
     }
 }

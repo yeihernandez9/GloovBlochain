@@ -3277,7 +3277,7 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/getbalance.usecases.ts": {
-        "version": "c041b4b8cbd1f930e0283ff9f65c9673330fd665ba3c4530de6b9e752fc1b599",
+        "version": "f08bcf7690f7518c0674c81db011ef8763dfc97a88a62c865f73570495513e20",
         "signature": "e2ae59ee2ca9ab82c9b05be2ab040aace63b7dc03ec9c5b4cf6313caf1dc65e5",
         "affectsGlobalScope": false
       },
@@ -4217,12 +4217,12 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/repositories/todo.repository.ts": {
-        "version": "5a3bf29c1d1a513b2bb9f02796a5fb28e345c8ebb6fd0777cc21768329aff4b4",
+        "version": "55b0e9e8aceb852bec68bacc0d16f649d28dfe55b2df1562dabf289ba714abf5",
         "signature": "2bbf3c0193a34dfd59eac8df73806e9ab8e40ce1228c71bae94296be73d848fd",
         "affectsGlobalScope": false
       },
       "../src/infrastructure/repositories/user.repository.ts": {
-        "version": "078cdac0623583e4e5b8687e53be5504be816eb03e87f47beba9435de4e12e96",
+        "version": "61687ba904c9ba22e70880a37e5863ccf52111e40a22e060402f2916b4076e96",
         "signature": "b9434625372893e71db9fb1389de6cabc66d2b33a5900ec7813c5513267b8938",
         "affectsGlobalScope": false
       },
@@ -4247,17 +4247,17 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/createaccount.usecases.ts": {
-        "version": "17097fc36077d394ee73be25501d90b5c2a50439042bb74b002812d97ee4ba64",
+        "version": "d627d1dd5ad55dd3944a8e83362bfba9a82bf61b3553421360dbfded26bb0902",
         "signature": "c8eb8e4b9c0ca2573dba3e6442b57f1e7bcfae9c966c364634eaba78b7558e62",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/sendtransaction.usecases.ts": {
-        "version": "a5be096beeedac146b0fe75eb8e3ea2eae0036de1bd6907efdfe0f5093e6d4c3",
+        "version": "3f0273369fd518d830e5e80d4ccf1f1b9a4a2b3b84ca786a849a776d28793d75",
         "signature": "11d2e705fcf3adc387df810319549316811ee1246181faf5e47ae5d5c93d1484",
         "affectsGlobalScope": false
       },
       "../src/infrastructure/services/blockchain/blockchain.service.ts": {
-        "version": "ceefb2bc7a7a9d039c4e49256cb280c26db08d622503df554712d87931f59254",
+        "version": "30fc9b755193fe49a9772617b1ef2cc4c33764fca38f9c5e2846da8c380bab9c",
         "signature": "5f4634d7da115185e4e3ea57da6c6a098034565f03393a2e8af8556ed6e2bf99",
         "affectsGlobalScope": false
       },
@@ -4267,37 +4267,37 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/withdrawals.usecases.ts": {
-        "version": "2b5430a32925fca155b0d557caf116dd6f1b177a4531f1372a57ff27284536aa",
+        "version": "d036ff3303d580a3dccc537c4a4210b32956434bde7fd001ae4af3ea933d3b40",
         "signature": "ec4b2547cee51a64681385724c34016cbb2330e933da32817a1b92f8358a1f75",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/returnuser.usecases.ts": {
-        "version": "1716368421df244b0c51e978304564839a0ec3d1cc9458b1f5c1c6fd0cacd8e1",
+        "version": "9d0bd08fed34e7bf17490c16f02f3bbaa5c1f5b02ec422dd293639e035850953",
         "signature": "4fdb9afbf474557dfae28323853258c27621b5c8206579a9d2beeea43569e1b4",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/cashreturn.usecases.ts": {
-        "version": "2f36b45d7daff2d2e83f705f45dc620bfa262086741b0bc23f871524b5bf38eb",
+        "version": "aa573c2f606bcad3862093a7bbf20f709d9bec45845f69a68dbeb010149084f5",
         "signature": "a0aca78b80124006866fd6c502355293ab792ec205567d8f8ca261511948b3b7",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addtokens.usecases.ts": {
-        "version": "0930132020f0a9085eb277f368a5d33dd52fa7d741fb08098cad6dfa10ed33db",
+        "version": "11fcd70fdacb01193ed8fc48835b8879fb691aee55418b12346a3d543802c335",
         "signature": "fccfaf97c20af65c351ad534fe7f7d375327f6e23a0ba36e3d49e0ac8463cc8c",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addtokenschargeback.usecases.ts": {
-        "version": "a4b56abe19f396b8e42fbed4ebcf8fd33aa33382e7ec70c6080100a3f8ebb3f7",
+        "version": "b6595baf2f3635a60c41527d434e835041167210844147a7a887d81f0fcdfb6d",
         "signature": "d9d315b5495858100d2c49f3410f003b5d950596f5b60c6cab8cec8977dabba5",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addtokensbonds.usecases.ts": {
-        "version": "3a3dc21c2644394c3d0fbd21d994f8a01249c6745d7e92a63cd07f085d2e0cad",
+        "version": "d1f8333f8e5c1d1599e59fe53030a5316ca9756edd8cb7fef25b7f2bc3e5ae6c",
         "signature": "ca0b0356a5165dc5d7b623b729ad71e93ec3771fb5e80bc426c367a9b7eb4558",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addbounds.usecases.ts": {
-        "version": "283c6c3e045692ed4e1cf88688d7d97cd53b37fdc47f24143eadd762ebc936fc",
+        "version": "35ba4e1389d45a23030854e7e7042ece4c472a98c2cef85093fef706d76619b0",
         "signature": "1f41c178f4bfeae5504e9de533dedbfbcba96aeaf8514499e337e3b53420d18a",
         "affectsGlobalScope": false
       },
@@ -4312,7 +4312,7 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/transittokens.usecases.ts": {
-        "version": "72f59ffd7e07523e726ca31912d8784e542532c5a5cef409457ab647f6104202",
+        "version": "9bd73726e54c7adf541a2b746fa93a9aee45aed95f24d17217fc84ae561c40c4",
         "signature": "d7b01f5e639e8624cca35ba8419384ca0088d6d4be991919fd9aadeb289e24ad",
         "affectsGlobalScope": false
       },
@@ -5357,8 +5357,13 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/config/typeorm/typeorm.config.ts": {
-        "version": "e621ff1210f1fb56ae7d817b2e839490b98a084dba0f83acc6e44963c8cebdfd",
+        "version": "643c06d5e9b22cf8222b8895e3fc2410cf66e6ae145bfc5c2b1cc17da0bdc7de",
         "signature": "26609a672cfb61968fce39ff554ca997988dfb0b6cdd2108e30e11abe210081c",
+        "affectsGlobalScope": false
+      },
+      "../src/usecases/blockchain/statusblockchain.usecases.ts": {
+        "version": "ef06ba8c1daaa8c04a914bde7d39275e6f1a617277b27c94749c204befd8a25f",
+        "signature": "1a8ee96279fca9ad56389518b30b33c5b570e7bb1625e16541d2133f07b4e7d4",
         "affectsGlobalScope": false
       },
       "../node_modules/@babel/types/lib/index.d.ts": {
@@ -9703,6 +9708,11 @@
         "../src/domain/model/user.ts",
         "../src/domain/repositories/userrepository.interface.ts"
       ],
+      "../src/usecases/blockchain/statusblockchain.usecases.ts": [
+        "../src/domain/adapters/blockchain.interface.ts",
+        "../src/domain/logger/logger.interface.ts",
+        "../src/domain/web3/gloov.interface.ts"
+      ],
       "../src/usecases/gloov/addbounds.usecases.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/adapters/blockchain.interface.ts",
@@ -9734,6 +9744,7 @@
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/createaccount.usecases.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
@@ -9742,6 +9753,7 @@
         "../node_modules/decimal.js/decimal.d.ts"
       ],
       "../src/usecases/gloov/getbalance.usecases.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
@@ -13764,6 +13776,11 @@
         "../src/domain/model/user.ts",
         "../src/domain/repositories/userrepository.interface.ts"
       ],
+      "../src/usecases/blockchain/statusblockchain.usecases.ts": [
+        "../src/domain/adapters/blockchain.interface.ts",
+        "../src/domain/logger/logger.interface.ts",
+        "../src/domain/web3/gloov.interface.ts"
+      ],
       "../src/usecases/gloov/addbounds.usecases.ts": [
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
@@ -14934,6 +14951,7 @@
       "../src/usecases/auth/login.usecases.ts",
       "../src/usecases/auth/logout.usecases.ts",
       "../src/usecases/auth/register.usecases.ts",
+      "../src/usecases/blockchain/statusblockchain.usecases.ts",
       "../src/usecases/gloov/addbounds.usecases.ts",
       "../src/usecases/gloov/addtokens.usecases.ts",
       "../src/usecases/gloov/addtokensbonds.usecases.ts",

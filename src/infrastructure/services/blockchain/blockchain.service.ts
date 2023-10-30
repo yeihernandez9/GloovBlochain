@@ -119,6 +119,4 @@ export class BlockchainService implements IBlockchainService {
 
     return balanceEther;
   }
-
-
 }

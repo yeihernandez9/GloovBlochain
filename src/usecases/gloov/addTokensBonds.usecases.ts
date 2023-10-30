@@ -9,7 +9,7 @@ export class AddTokensBondsUseCases {
     private readonly gloovConfig: GloovConfig,
     private readonly logger: ILogger,
     private readonly blockchainService: IBlockchainService,
-  ) {}
+  ) { }
 
   async execute(pkOrigin: string, accDestiny: string, value: number): Promise<any> {
     const pkMaster = this.gloovConfig.getAccountMaster();
@@ -18,7 +18,7 @@ export class AddTokensBondsUseCases {
     const addressDestiny = await this.blockchainService.getAddressPublic(pkBondAcount, this.ws);
     const balance = await this.blockchainService.balances(address, this.ws);
     this.logger.log('AddTokensBondsUseCases execute', `address: ${address}, balance: ${balance}`);
-    if (balance > 0 && value <= balance) {
+    if (balance >= 0 && value <= balance) {
       this.logger.log('AddTokensBondsUseCases execute', `se puede hacer la tansaccinos `);
       const convertWei = await this.blockchainService.convertEtherToWei(value, this.ws);
       const nonce = await this.blockchainService.getnonce(address, this.ws);
@@ -37,7 +37,7 @@ export class AddTokensBondsUseCases {
       return transaction.transactionHash;
     } else {
       this.logger.log('AddTokensBondsUseCases execute', `no tiene balance `);
-      throw new NotFoundException();
+      throw new NotFoundException("no tiene balance");
     }
   }
 }
