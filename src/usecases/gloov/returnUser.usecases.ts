@@ -40,10 +40,11 @@ export class ReturnUserUseCases {
           throw new NotFoundException(`No tiene balance `);
         }
       } else {
-        throw new NotFoundException("No se puede enviar a las mismas billeteras");
+        throw new NotFoundException("No se permiten transaccione en CEROS");
       }
     } else {
-      throw new NotFoundException("No se permiten transaccione en CEROS");
+
+      throw new NotFoundException("No se puede enviar a las mismas billeteras");
     }
 
   }
