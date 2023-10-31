@@ -1,5 +1,5 @@
 import { UseCaseProxy } from '../../usecases-proxy/usecases-proxy';
-import { IsGloovBalancePresenter, createAccountPresenter, transactionPresenter, transitTokensPresenter } from './gloov.presenter';
+import { createAccountPresenter, transactionPresenter, transitTokensPresenter } from './gloov.presenter';
 import { GetBalanceUseCases } from '../../../usecases/gloov/getBalance.usecases';
 import { SendTransactinoDto } from './gloov.dto';
 import { CreateAccountUseCases } from '../../../usecases/gloov/createAccount.usecases';
@@ -27,7 +27,7 @@ export declare class GloovController {
     private readonly transitTokensUsecaseProxy;
     private readonly statusUsecaseProxy;
     constructor(getBalanceUsecaseProxy: UseCaseProxy<GetBalanceUseCases>, createAccountUsecaseProxy: UseCaseProxy<CreateAccountUseCases>, sendTransactiontUsecaseProxy: UseCaseProxy<SendTransactionUseCases>, WithdrawalsUsecaseProxy: UseCaseProxy<WithdrawalsUseCases>, ReturnUserUsecaseProxy: UseCaseProxy<ReturnUserUseCases>, cashReturnUsecaseProxy: UseCaseProxy<CashReturnUseCases>, addTokensUsecaseProxy: UseCaseProxy<AddTokensUseCases>, addTokensChargeBackUsecaseProxy: UseCaseProxy<AddTokensChargeBackUseCases>, addTokensBondsUsecaseProxy: UseCaseProxy<AddTokensBondsUseCases>, addBondsUsecaseProxy: UseCaseProxy<AddBoundsUseCases>, transitTokensUsecaseProxy: UseCaseProxy<TransitTokensUseCases>, statusUsecaseProxy: UseCaseProxy<StatusBlockchainUseCases>);
-    getBalance(address: string): Promise<IsGloovBalancePresenter>;
+    getBalance(account: string): Promise<number>;
     createAccount(): Promise<createAccountPresenter>;
     transitTokens(address: string): Promise<transitTokensPresenter>;
     sendTransaction(sendTransactinoDto: SendTransactinoDto): Promise<transactionPresenter>;

@@ -36,11 +36,11 @@ let GloovController = class GloovController {
         this.transitTokensUsecaseProxy = transitTokensUsecaseProxy;
         this.statusUsecaseProxy = statusUsecaseProxy;
     }
-    async getBalance(address) {
-        const balance = await this.getBalanceUsecaseProxy.getInstance().execute(address);
+    async getBalance(account) {
+        const balance = await this.getBalanceUsecaseProxy.getInstance().execute(account);
         const response = new gloov_presenter_1.IsGloovBalancePresenter();
         response.balance = balance;
-        return response;
+        return balance;
     }
     async createAccount() {
         const account = await this.createAccountUsecaseProxy.getInstance().execute();
@@ -119,23 +119,23 @@ let GloovController = class GloovController {
     }
 };
 __decorate([
-    common_1.Get('getBalance/:address'),
+    common_1.Get('account/getBalance/'),
     swagger_1.ApiOperation({ description: 'Este servicio retorna el balance de monedas que tiene un usuario en la aplicación.' }),
     response_decorator_1.ApiResponseType(gloov_presenter_1.IsGloovBalancePresenter, false),
-    __param(0, common_1.Param('address')),
+    __param(0, common_1.Query('account')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], GloovController.prototype, "getBalance", null);
 __decorate([
-    common_1.Get('createAccount'),
+    common_1.Get('account/createAccount'),
     swagger_1.ApiOperation({ description: 'Este servicio retorna las llaves pública y privada de un usuario recien creado.' }),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], GloovController.prototype, "createAccount", null);
 __decorate([
-    common_1.Get('transitTokens/:address'),
+    common_1.Get('account/transitTokens/:address'),
     response_decorator_1.ApiResponseType(gloov_presenter_1.transitTokensPresenter, false),
     swagger_1.ApiOperation({ description: 'Este servicio realiza la consulta del saldo en transito para retiro.' }),
     __param(0, common_1.Param('address')),
@@ -144,7 +144,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], GloovController.prototype, "transitTokens", null);
 __decorate([
-    common_1.Post('sendTransaction'),
+    common_1.Post('blockchain/sendTransaction'),
     swagger_1.ApiOperation({ description: 'Este servicio realiza la transferencia de monedas entre cuentas. El Body requiere todos los parámetros' }),
     common_1.HttpCode(200),
     response_decorator_1.ApiResponseType(gloov_presenter_1.transactionPresenter, false),
@@ -154,7 +154,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], GloovController.prototype, "sendTransaction", null);
 __decorate([
-    common_1.Post('withdrawals'),
+    common_1.Post('blockchain/withdrawals'),
     swagger_1.ApiOperation({ description: 'Este servicio realiza el retiro de dinero de la cuenta. El Body requiere "pkOrigin" y "value".' }),
     common_1.HttpCode(200),
     response_decorator_1.ApiResponseType(gloov_presenter_1.transactionPresenter, false),
@@ -164,7 +164,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], GloovController.prototype, "withdrawals", null);
 __decorate([
-    common_1.Post('returnUser'),
+    common_1.Post('blockchain/returnUser'),
     swagger_1.ApiOperation({ description: 'Este servicio realiza para la adición de monedas a la cuenta de usuario desde la cuenta Return. El Body requiere "accDestiny" y "value".' }),
     common_1.HttpCode(200),
     response_decorator_1.ApiResponseType(gloov_presenter_1.transactionPresenter, false),
@@ -174,7 +174,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], GloovController.prototype, "returnUser", null);
 __decorate([
-    common_1.Post('cashReturn'),
+    common_1.Post('blockchain/cashReturn'),
     swagger_1.ApiOperation({ description: 'Este servicio realiza para la adición de monedas en la cuenta Return desde la cuenta Cash. El Body requiere "value".' }),
     common_1.HttpCode(200),
     response_decorator_1.ApiResponseType(gloov_presenter_1.transactionPresenter, false),
@@ -184,7 +184,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], GloovController.prototype, "cashReturn", null);
 __decorate([
-    common_1.Post('addTokens'),
+    common_1.Post('blockchain/addTokens'),
     swagger_1.ApiOperation({ description: 'Este servicio realiza la carga de monedas a un usuario en especifico. El Body requiere "accDestiny" y "value".' }),
     common_1.HttpCode(200),
     response_decorator_1.ApiResponseType(gloov_presenter_1.transactionPresenter, false),
@@ -194,7 +194,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], GloovController.prototype, "addTokens", null);
 __decorate([
-    common_1.Post('addTokensChargeBack'),
+    common_1.Post('blockchain/addTokensChargeBack'),
     swagger_1.ApiOperation({ description: 'Este servicio realiza para la adición de monedas en la cuenta charge back. El Body requiere "pkOrigin" y "value".' }),
     common_1.HttpCode(200),
     response_decorator_1.ApiResponseType(gloov_presenter_1.transactionPresenter, false),
@@ -204,7 +204,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], GloovController.prototype, "addTokensChargeBack", null);
 __decorate([
-    common_1.Post('addTokensBonds'),
+    common_1.Post('blockchain/addTokensBonds'),
     swagger_1.ApiOperation({ description: 'Este servicio realiza para la adición de monedas en la cuenta de bonos. El Body requiere "value".' }),
     common_1.HttpCode(200),
     response_decorator_1.ApiResponseType(gloov_presenter_1.transactionPresenter, false),
@@ -214,7 +214,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], GloovController.prototype, "addTokensBonds", null);
 __decorate([
-    common_1.Post('addBonds'),
+    common_1.Post('blockchain/addBonds'),
     swagger_1.ApiOperation({ description: 'Este servicio realiza la carga de bonos a un usuario en especifico. El Body requiere "accDestiny" y "value".' }),
     common_1.HttpCode(200),
     response_decorator_1.ApiResponseType(gloov_presenter_1.transactionPresenter, false),
@@ -224,14 +224,14 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], GloovController.prototype, "addBonds", null);
 __decorate([
-    common_1.Get('livess'),
+    common_1.Get('blockchain/livess'),
     swagger_1.ApiOperation({ description: 'Este servicio retorna el estado de la blockchain.' }),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], GloovController.prototype, "status", null);
 GloovController = __decorate([
-    common_1.Controller('gloov'),
+    common_1.Controller(),
     swagger_1.ApiTags('Blockchain'),
     swagger_1.ApiResponse({ status: 500, description: 'Internal error' }),
     swagger_1.ApiExtraModels(gloov_presenter_1.IsGloovBalancePresenter),

@@ -33,7 +33,7 @@ import { AddBoundsUseCases } from '../../../usecases/gloov/addBounds.usecases';
 import { TransitTokensUseCases } from '../../../usecases/gloov/transitTokens.usecases';
 import { StatusBlockchainUseCases } from 'src/usecases/blockchain/statusBlockchain.usecases';
 
-@Controller('gloov')
+@Controller()
 @ApiTags('Blockchain')
 @ApiResponse({ status: 500, description: 'Internal error' })
 @ApiExtraModels(IsGloovBalancePresenter)
@@ -65,19 +65,19 @@ export class GloovController {
     private readonly statusUsecaseProxy: UseCaseProxy<StatusBlockchainUseCases>
   ) { }
 
-  @Get('getBalance/:address')
+  @Get('account/getBalance/')
   //@ApiBearerAuth()
   //@UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'Este servicio retorna el balance de monedas que tiene un usuario en la aplicación.' })
   @ApiResponseType(IsGloovBalancePresenter, false)
-  async getBalance(@Param('address') address: string) {
-    const balance = await this.getBalanceUsecaseProxy.getInstance().execute(address);
+  async getBalance(@Query('account') account: string) {
+    const balance = await this.getBalanceUsecaseProxy.getInstance().execute(account);
     const response = new IsGloovBalancePresenter();
     response.balance = balance;
-    return response;
+    return balance;
   }
 
-  @Get('createAccount')
+  @Get('account/createAccount')
   //@ApiBearerAuth()
   //@UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'Este servicio retorna las llaves pública y privada de un usuario recien creado.' })
@@ -90,7 +90,7 @@ export class GloovController {
   }
 
 
-  @Get('transitTokens/:address')
+  @Get('account/transitTokens/:address')
   //@ApiBearerAuth()
   //@UseGuards(JwtAuthGuard)
   @ApiResponseType(transitTokensPresenter, false)
@@ -105,7 +105,7 @@ export class GloovController {
   }
 
 
-  @Post('sendTransaction')
+  @Post('blockchain/sendTransaction')
   //@ApiBearerAuth()
   //@UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'Este servicio realiza la transferencia de monedas entre cuentas. El Body requiere todos los parámetros' })
@@ -119,7 +119,7 @@ export class GloovController {
     return response;
   }
 
-  @Post('withdrawals')
+  @Post('blockchain/withdrawals')
   //@ApiBearerAuth()
   //@UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'Este servicio realiza el retiro de dinero de la cuenta. El Body requiere "pkOrigin" y "value".' })
@@ -133,7 +133,7 @@ export class GloovController {
     return response;
   }
 
-  @Post('returnUser')
+  @Post('blockchain/returnUser')
   //@ApiBearerAuth()
   //@UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'Este servicio realiza para la adición de monedas a la cuenta de usuario desde la cuenta Return. El Body requiere "accDestiny" y "value".' })
@@ -147,7 +147,7 @@ export class GloovController {
     return response;
   }
 
-  @Post('cashReturn')
+  @Post('blockchain/cashReturn')
   //@ApiBearerAuth()
   //@UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'Este servicio realiza para la adición de monedas en la cuenta Return desde la cuenta Cash. El Body requiere "value".' })
@@ -161,7 +161,7 @@ export class GloovController {
     return response;
   }
 
-  @Post('addTokens')
+  @Post('blockchain/addTokens')
   //@ApiBearerAuth()
   //@UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'Este servicio realiza la carga de monedas a un usuario en especifico. El Body requiere "accDestiny" y "value".' })
@@ -175,7 +175,7 @@ export class GloovController {
     return response;
   }
 
-  @Post('addTokensChargeBack')
+  @Post('blockchain/addTokensChargeBack')
   //@ApiBearerAuth()
   ///\@UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'Este servicio realiza para la adición de monedas en la cuenta charge back. El Body requiere "pkOrigin" y "value".' })
@@ -189,7 +189,7 @@ export class GloovController {
     return response;
   }
 
-  @Post('addTokensBonds')
+  @Post('blockchain/addTokensBonds')
   //@ApiBearerAuth()
   //@UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'Este servicio realiza para la adición de monedas en la cuenta de bonos. El Body requiere "value".' })
@@ -203,7 +203,7 @@ export class GloovController {
     return response;
   }
 
-  @Post('addBonds')
+  @Post('blockchain/addBonds')
   //@ApiBearerAuth()
   //@UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'Este servicio realiza la carga de bonos a un usuario en especifico. El Body requiere "accDestiny" y "value".' })
@@ -217,7 +217,7 @@ export class GloovController {
     return response;
   }
 
-  @Get('livess')
+  @Get('blockchain/livess')
   //@ApiBearerAuth()
   //@UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'Este servicio retorna el estado de la blockchain.' })
