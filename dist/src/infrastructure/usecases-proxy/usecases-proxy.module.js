@@ -45,6 +45,7 @@ const addTokensChargeBack_usecases_1 = require("../../usecases/gloov/addTokensCh
 const addTokensBonds_usecases_1 = require("../../usecases/gloov/addTokensBonds.usecases");
 const addBounds_usecases_1 = require("../../usecases/gloov/addBounds.usecases");
 const transitTokens_usecases_1 = require("../../usecases/gloov/transitTokens.usecases");
+const statusBlockchain_usecases_1 = require("../../usecases/blockchain/statusBlockchain.usecases");
 let UsecasesProxyModule = UsecasesProxyModule_1 = class UsecasesProxyModule {
     static register() {
         return {
@@ -150,6 +151,11 @@ let UsecasesProxyModule = UsecasesProxyModule_1 = class UsecasesProxyModule {
                     provide: UsecasesProxyModule_1.TRANSIT_TOKENS,
                     useFactory: (logger, config, blockchainService, blockchainRepo) => new usecases_proxy_1.UseCaseProxy(new transitTokens_usecases_1.TransitTokensUseCases(config, logger, blockchainService, blockchainRepo)),
                 },
+                {
+                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService, blockchain_repository_1.DatabaseBlockchainRepository],
+                    provide: UsecasesProxyModule_1.STATUS,
+                    useFactory: (logger, config, blockchainService) => new usecases_proxy_1.UseCaseProxy(new statusBlockchain_usecases_1.StatusBlockchainUseCases(config, logger, blockchainService)),
+                },
             ],
             exports: [
                 UsecasesProxyModule_1.GET_TODO_USECASES_PROXY,
@@ -171,7 +177,8 @@ let UsecasesProxyModule = UsecasesProxyModule_1 = class UsecasesProxyModule {
                 UsecasesProxyModule_1.ADD_TOKENS_CHARGE_BACK,
                 UsecasesProxyModule_1.ADD_TOKENS_BONDS,
                 UsecasesProxyModule_1.ADD_BONDS,
-                UsecasesProxyModule_1.TRANSIT_TOKENS
+                UsecasesProxyModule_1.TRANSIT_TOKENS,
+                UsecasesProxyModule_1.STATUS
             ],
         };
     }
@@ -196,6 +203,7 @@ UsecasesProxyModule.ADD_TOKENS_CHARGE_BACK = 'addTokensChargeBackCasesProxy';
 UsecasesProxyModule.ADD_TOKENS_BONDS = 'addTokensBondsCasesProxy';
 UsecasesProxyModule.ADD_BONDS = 'addBondsCasesProxy';
 UsecasesProxyModule.TRANSIT_TOKENS = 'transitTokensCasesProxy';
+UsecasesProxyModule.STATUS = 'statusCasesProxy';
 UsecasesProxyModule = UsecasesProxyModule_1 = __decorate([
     common_1.Module({
         imports: [

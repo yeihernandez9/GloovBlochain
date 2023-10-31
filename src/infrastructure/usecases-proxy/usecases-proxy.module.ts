@@ -39,6 +39,7 @@ import { AddTokensChargeBackUseCases } from '../../usecases/gloov/addTokensCharg
 import { AddTokensBondsUseCases } from '../../usecases/gloov/addTokensBonds.usecases';
 import { AddBoundsUseCases } from '../../usecases/gloov/addBounds.usecases';
 import { TransitTokensUseCases } from '../../usecases/gloov/transitTokens.usecases';
+import { StatusBlockchainUseCases } from 'src/usecases/blockchain/statusBlockchain.usecases';
 
 @Module({
   imports: [
@@ -77,6 +78,9 @@ export class UsecasesProxyModule {
   static ADD_TOKENS_BONDS = 'addTokensBondsCasesProxy';
   static ADD_BONDS = 'addBondsCasesProxy';
   static TRANSIT_TOKENS = 'transitTokensCasesProxy'
+
+  //Blockchain
+  static STATUS = 'statusCasesProxy'
 
   static register(): DynamicModule {
     return {
@@ -203,6 +207,13 @@ export class UsecasesProxyModule {
           useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService, blockchainRepo: DatabaseBlockchainRepository) =>
             new UseCaseProxy(new TransitTokensUseCases(config, logger, blockchainService, blockchainRepo)),
         },
+
+        {
+          inject: [LoggerService, EnvironmentConfigService, BlockchainService, DatabaseBlockchainRepository],
+          provide: UsecasesProxyModule.STATUS,
+          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService) =>
+            new UseCaseProxy(new StatusBlockchainUseCases(config, logger, blockchainService)),
+        },
       ],
       exports: [
         UsecasesProxyModule.GET_TODO_USECASES_PROXY,
@@ -224,7 +235,8 @@ export class UsecasesProxyModule {
         UsecasesProxyModule.ADD_TOKENS_CHARGE_BACK,
         UsecasesProxyModule.ADD_TOKENS_BONDS,
         UsecasesProxyModule.ADD_BONDS,
-        UsecasesProxyModule.TRANSIT_TOKENS
+        UsecasesProxyModule.TRANSIT_TOKENS,
+        UsecasesProxyModule.STATUS
       ],
     };
   }

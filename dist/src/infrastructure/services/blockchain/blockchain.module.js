@@ -15,6 +15,9 @@ BlockchainModule = __decorate([
     common_1.Module({
         providers: [blockchain_service_1.BlockchainService],
         exports: [blockchain_service_1.BlockchainService],
+        imports: [
+            common_1.HttpModule,
+        ],
     })
 ], BlockchainModule);
 exports.BlockchainModule = BlockchainModule;

@@ -2,7 +2,7 @@ import { IBlockchainService } from "src/domain/adapters/blockchain.interface";
 import { ILogger } from "src/domain/logger/logger.interface";
 import { GloovConfig } from "src/domain/web3/gloov.interface";
 
-export class AddBoundsUseCases {
+export class StatusBlockchainUseCases {
     ws: string = this.gloovConfig.getWeb3Url();
     constructor(
         private readonly gloovConfig: GloovConfig,
@@ -11,6 +11,7 @@ export class AddBoundsUseCases {
     ) { }
 
     async execute(): Promise<any> {
-        return "hola"
+        const status = this.blockchainService.statusNode(this.ws)
+        return status
     }
 }

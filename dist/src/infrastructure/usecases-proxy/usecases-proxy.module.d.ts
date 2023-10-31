@@ -20,5 +20,6 @@ export declare class UsecasesProxyModule {
     static ADD_TOKENS_BONDS: string;
     static ADD_BONDS: string;
     static TRANSIT_TOKENS: string;
+    static STATUS: string;
     static register(): DynamicModule;
 }

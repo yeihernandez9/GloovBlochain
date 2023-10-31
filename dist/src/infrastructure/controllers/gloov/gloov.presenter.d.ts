@@ -2,7 +2,7 @@ export declare class IsGloovBalancePresenter {
     balance: number;
 }
 export declare class createAccountPresenter {
-    address: string;
+    publicKey: string;
     privateKey: string;
 }
 export declare class transactionPresenter {

@@ -3272,8 +3272,8 @@
         "affectsGlobalScope": false
       },
       "../src/domain/adapters/blockchain.interface.ts": {
-        "version": "27aeb406d4f371715c0f38483501d33948dd53b205b47ac2d925c0a1a1e6e354",
-        "signature": "3532cbe4a90279ebd170cc72f293c79f82e4aa9b3de28ff967fd4f7a50e05899",
+        "version": "fa51d4f0e9d76cd7031741bb0d4c6b47101fb235d18704013cdf3d0735dc451a",
+        "signature": "4b89e846ce96efc8eacbdafe7c037caa3a13e28d07518415199e4aeabc206a10",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/getbalance.usecases.ts": {
@@ -4217,12 +4217,12 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/repositories/todo.repository.ts": {
-        "version": "55b0e9e8aceb852bec68bacc0d16f649d28dfe55b2df1562dabf289ba714abf5",
+        "version": "b7131585069bbfaf4fa3249715ec3811c4c00f640c856eaed1446eb46ef08228",
         "signature": "2bbf3c0193a34dfd59eac8df73806e9ab8e40ce1228c71bae94296be73d848fd",
         "affectsGlobalScope": false
       },
       "../src/infrastructure/repositories/user.repository.ts": {
-        "version": "61687ba904c9ba22e70880a37e5863ccf52111e40a22e060402f2916b4076e96",
+        "version": "b6bf15cd788dfe42dd210b5308d8b05d5f3947234df7b2350260503418309b4c",
         "signature": "b9434625372893e71db9fb1389de6cabc66d2b33a5900ec7813c5513267b8938",
         "affectsGlobalScope": false
       },
@@ -4252,52 +4252,52 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/sendtransaction.usecases.ts": {
-        "version": "3f0273369fd518d830e5e80d4ccf1f1b9a4a2b3b84ca786a849a776d28793d75",
+        "version": "2408208a0c291240b5e35acea4f8477d2ae20937ff9a58f64bac77c5dd594db1",
         "signature": "11d2e705fcf3adc387df810319549316811ee1246181faf5e47ae5d5c93d1484",
         "affectsGlobalScope": false
       },
       "../src/infrastructure/services/blockchain/blockchain.service.ts": {
-        "version": "30fc9b755193fe49a9772617b1ef2cc4c33764fca38f9c5e2846da8c380bab9c",
-        "signature": "5f4634d7da115185e4e3ea57da6c6a098034565f03393a2e8af8556ed6e2bf99",
+        "version": "6525d5e12db2fad8d269cc23cac6c02dbd56aa0f53807daec669ee5820835d56",
+        "signature": "9ba0ebd17c31b250de3b4d4b161070ef05734da49f67b0f205f1d1daaed81644",
         "affectsGlobalScope": false
       },
       "../src/infrastructure/services/blockchain/blockchain.module.ts": {
-        "version": "fc6f14760eed2a5c628cb02c7caa4b81d4720813087ad4d70d57520e5c3c9e90",
+        "version": "8f79f4914fb4fa7f251729949a340c26940d01c538afb3f83bfc5955a2c1e99a",
         "signature": "124b26b720dc8acff5cf64158af8b43321e74f48acff32aa897b21fe97129de9",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/withdrawals.usecases.ts": {
-        "version": "d036ff3303d580a3dccc537c4a4210b32956434bde7fd001ae4af3ea933d3b40",
+        "version": "057cc47d708fb24f0710f3123dfb0aa937a304aae4590b9cd705ce5dcc980736",
         "signature": "ec4b2547cee51a64681385724c34016cbb2330e933da32817a1b92f8358a1f75",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/returnuser.usecases.ts": {
-        "version": "9d0bd08fed34e7bf17490c16f02f3bbaa5c1f5b02ec422dd293639e035850953",
+        "version": "0c0425ffed7e11e519ef47ffae5ac81d37ef331e788a6c29422a46d67d32c3f8",
         "signature": "4fdb9afbf474557dfae28323853258c27621b5c8206579a9d2beeea43569e1b4",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/cashreturn.usecases.ts": {
-        "version": "aa573c2f606bcad3862093a7bbf20f709d9bec45845f69a68dbeb010149084f5",
+        "version": "337e0dcb064d20dd19cec4157dde8eb19c8e37d04569de6bb52d763b05726e19",
         "signature": "a0aca78b80124006866fd6c502355293ab792ec205567d8f8ca261511948b3b7",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addtokens.usecases.ts": {
-        "version": "11fcd70fdacb01193ed8fc48835b8879fb691aee55418b12346a3d543802c335",
+        "version": "36467eb4f418ffbf25d6733d491681c9bce0dcb6e9a815b03cf2f5e7c7b50a9c",
         "signature": "fccfaf97c20af65c351ad534fe7f7d375327f6e23a0ba36e3d49e0ac8463cc8c",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addtokenschargeback.usecases.ts": {
-        "version": "b6595baf2f3635a60c41527d434e835041167210844147a7a887d81f0fcdfb6d",
+        "version": "2f4721cec2f2e594a4b0f64ad4854df511374f4d5ff0990d73beb28ec1a33f86",
         "signature": "d9d315b5495858100d2c49f3410f003b5d950596f5b60c6cab8cec8977dabba5",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addtokensbonds.usecases.ts": {
-        "version": "d1f8333f8e5c1d1599e59fe53030a5316ca9756edd8cb7fef25b7f2bc3e5ae6c",
+        "version": "9ff3aaaf366c6285be0c76d4bf3f2664e572b5eb1a517d8291a15d70dc9cf75d",
         "signature": "ca0b0356a5165dc5d7b623b729ad71e93ec3771fb5e80bc426c367a9b7eb4558",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addbounds.usecases.ts": {
-        "version": "35ba4e1389d45a23030854e7e7042ece4c472a98c2cef85093fef706d76619b0",
+        "version": "8ec5493561dcd99aa08324a98eff6865973c7e6ea9c3d554a1aa6d6009ddea70",
         "signature": "1f41c178f4bfeae5504e9de533dedbfbcba96aeaf8514499e337e3b53420d18a",
         "affectsGlobalScope": false
       },
@@ -4312,13 +4312,18 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/transittokens.usecases.ts": {
-        "version": "9bd73726e54c7adf541a2b746fa93a9aee45aed95f24d17217fc84ae561c40c4",
+        "version": "be2b01c5c12e09d7c51226993957e0520291f937d0192900f5b47f507fa23c53",
         "signature": "d7b01f5e639e8624cca35ba8419384ca0088d6d4be991919fd9aadeb289e24ad",
         "affectsGlobalScope": false
       },
+      "../src/usecases/blockchain/statusblockchain.usecases.ts": {
+        "version": "5ef48a4ad3b6c1a78ac466bf50e6361221473d35cf133d8ed4c0c9401e12a53b",
+        "signature": "57272c41e0b0ef7a9e1842705de8ed2ad589474cc5ede3fcd7cc3b9859a4c0aa",
+        "affectsGlobalScope": false
+      },
       "../src/infrastructure/usecases-proxy/usecases-proxy.module.ts": {
-        "version": "f940c0f95818f4df4f528f1912b07534b6649e99642d804f0c88981af7dde543",
-        "signature": "776d2cefd538a86a1ce7fe5526974fe6a8d685fd2ed137ca64a5b0911dcb4acd",
+        "version": "cf6ef99e4a8f95307ecd9d1a446735924fff4862b2002a044e8af0eaf35199e9",
+        "signature": "4ebcbd64499864b0bd44cf0c3fd0d196b5bdf77502fd29a9c2936c2a16d71b30",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/swagger/dist/decorators/api-basic.decorator.d.ts": {
@@ -5092,8 +5097,8 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/controllers/gloov/gloov.presenter.ts": {
-        "version": "9f1edb261a8032c3463d87c354c879fc60090fd62d855fbf63ec4d6b6440d561",
-        "signature": "65c06c8b3f3137d895435a9697b791ea075538c71111d498e44e8f3b518334b2",
+        "version": "248cb82008a9a69ccf79109d8f8f578458df6772eac3932b631d74a2d0ad390e",
+        "signature": "1985b434fc0cc29af7dbe343a76c70675b6392dfdd3fefe31ba10dfa0182192e",
         "affectsGlobalScope": false
       },
       "../src/infrastructure/controllers/gloov/gloov.dto.ts": {
@@ -5102,8 +5107,8 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/controllers/gloov/gloov.controller.ts": {
-        "version": "893ea9413afd752d1684667e265e523491b64873bc021e2dc531933024cefd8b",
-        "signature": "88aa4b655aebf7bcedad3b82d50887797a3f6489dba152b0655bf54902aeab20",
+        "version": "a14fdbf1227597a8315b33fdf1b3369ca32da8a2f481dfce33605d328bb8c1d5",
+        "signature": "b74aaa813299b915ad6b02872a2d2cb32a6bbc9f2338d6fd9a44fe7f748f6e41",
         "affectsGlobalScope": false
       },
       "../src/infrastructure/controllers/controllers.module.ts": {
@@ -5357,13 +5362,18 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/config/typeorm/typeorm.config.ts": {
-        "version": "643c06d5e9b22cf8222b8895e3fc2410cf66e6ae145bfc5c2b1cc17da0bdc7de",
+        "version": "bb0aca4feb67ad57f40e2dd71369a733f7c0b4b8f57c4153991634a5fc728b4e",
         "signature": "26609a672cfb61968fce39ff554ca997988dfb0b6cdd2108e30e11abe210081c",
         "affectsGlobalScope": false
       },
-      "../src/usecases/blockchain/statusblockchain.usecases.ts": {
-        "version": "ef06ba8c1daaa8c04a914bde7d39275e6f1a617277b27c94749c204befd8a25f",
-        "signature": "1a8ee96279fca9ad56389518b30b33c5b570e7bb1625e16541d2133f07b4e7d4",
+      "../src/infrastructure/controllers/blockchain/blockchain.controller.ts": {
+        "version": "937c9fff8c25f34bf986a02b88063ab390607e858e22985af7d9afb6b9b54765",
+        "signature": "1f6b675d77fb405df823ba8f98c4f1dc74b152027c0bcc579e159c2d9d601086",
+        "affectsGlobalScope": false
+      },
+      "../src/infrastructure/controllers/blockchain/blockchain.presenter.ts": {
+        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "affectsGlobalScope": false
       },
       "../node_modules/@babel/types/lib/index.d.ts": {
@@ -9497,6 +9507,14 @@
         "../node_modules/@nestjs/swagger/index.d.ts",
         "../src/domain/model/user.ts"
       ],
+      "../src/infrastructure/controllers/blockchain/blockchain.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/swagger/index.d.ts",
+        "../src/infrastructure/common/swagger/response.decorator.ts",
+        "../src/infrastructure/usecases-proxy/usecases-proxy.module.ts",
+        "../src/infrastructure/usecases-proxy/usecases-proxy.ts",
+        "../src/usecases/blockchain/statusblockchain.usecases.ts"
+      ],
       "../src/infrastructure/controllers/controllers.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/infrastructure/controllers/auth/auth.controller.ts",
@@ -9514,6 +9532,7 @@
         "../src/infrastructure/controllers/gloov/gloov.presenter.ts",
         "../src/infrastructure/usecases-proxy/usecases-proxy.module.ts",
         "../src/infrastructure/usecases-proxy/usecases-proxy.ts",
+        "../src/usecases/blockchain/statusblockchain.usecases.ts",
         "../src/usecases/gloov/addbounds.usecases.ts",
         "../src/usecases/gloov/addtokens.usecases.ts",
         "../src/usecases/gloov/addtokensbonds.usecases.ts",
@@ -9663,6 +9682,7 @@
         "../src/usecases/auth/login.usecases.ts",
         "../src/usecases/auth/logout.usecases.ts",
         "../src/usecases/auth/register.usecases.ts",
+        "../src/usecases/blockchain/statusblockchain.usecases.ts",
         "../src/usecases/gloov/addbounds.usecases.ts",
         "../src/usecases/gloov/addtokens.usecases.ts",
         "../src/usecases/gloov/addtokensbonds.usecases.ts",
@@ -13693,10 +13713,15 @@
       "../src/infrastructure/controllers/auth/auth.presenter.ts": [
         "../src/domain/model/user.ts"
       ],
+      "../src/infrastructure/controllers/blockchain/blockchain.controller.ts": [
+        "../src/infrastructure/usecases-proxy/usecases-proxy.ts",
+        "../src/usecases/blockchain/statusblockchain.usecases.ts"
+      ],
       "../src/infrastructure/controllers/gloov/gloov.controller.ts": [
         "../src/infrastructure/controllers/gloov/gloov.dto.ts",
         "../src/infrastructure/controllers/gloov/gloov.presenter.ts",
         "../src/infrastructure/usecases-proxy/usecases-proxy.ts",
+        "../src/usecases/blockchain/statusblockchain.usecases.ts",
         "../src/usecases/gloov/addbounds.usecases.ts",
         "../src/usecases/gloov/addtokens.usecases.ts",
         "../src/usecases/gloov/addtokensbonds.usecases.ts",
@@ -13750,6 +13775,7 @@
         "../src/domain/adapters/bcrypt.interface.ts"
       ],
       "../src/infrastructure/services/blockchain/blockchain.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/adapters/blockchain.interface.ts"
       ],
       "../src/infrastructure/services/jwt/jwt.service.ts": [
@@ -14920,6 +14946,8 @@
       "../src/infrastructure/controllers/auth/auth-dto.class.ts",
       "../src/infrastructure/controllers/auth/auth.controller.ts",
       "../src/infrastructure/controllers/auth/auth.presenter.ts",
+      "../src/infrastructure/controllers/blockchain/blockchain.controller.ts",
+      "../src/infrastructure/controllers/blockchain/blockchain.presenter.ts",
       "../src/infrastructure/controllers/controllers.module.ts",
       "../src/infrastructure/controllers/gloov/gloov.controller.ts",
       "../src/infrastructure/controllers/gloov/gloov.dto.ts",

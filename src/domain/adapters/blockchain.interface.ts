@@ -16,4 +16,5 @@ export interface IBlockchainService {
   ): Promise<any>;
   getNumberBlock(ws: string): Promise<number>;
   getFromWei(balanceWei: string, ws: string): Promise<any>
+  statusNode(ws: string): Promise<any>
 }

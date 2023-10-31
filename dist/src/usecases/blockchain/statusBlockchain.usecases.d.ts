@@ -1,7 +1,7 @@
 import { IBlockchainService } from "src/domain/adapters/blockchain.interface";
 import { ILogger } from "src/domain/logger/logger.interface";
 import { GloovConfig } from "src/domain/web3/gloov.interface";
-export declare class AddBoundsUseCases {
+export declare class StatusBlockchainUseCases {
     private readonly gloovConfig;
     private readonly logger;
     private readonly blockchainService;

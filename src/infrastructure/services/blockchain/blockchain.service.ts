@@ -1,10 +1,10 @@
-import { Injectable } from '@nestjs/common';
+import { HttpService, Injectable } from '@nestjs/common';
 import { IBlockchainService } from '../../../domain/adapters/blockchain.interface';
 const { Web3 } = require('web3');
 
 @Injectable()
 export class BlockchainService implements IBlockchainService {
-
+  constructor(private httpService: HttpService) { }
   async getNumberBlock(ws: string): Promise<number> {
     const web3 = new Web3('http://' + ws);
     const block = await web3.eth.getBlockNumber();
@@ -118,5 +118,10 @@ export class BlockchainService implements IBlockchainService {
     }
 
     return balanceEther;
+  }
+
+  async statusNode(ws: string): Promise<any> {
+    const response = await this.httpService.get('http://' + ws + "/liveness").toPromise();
+    return response.data;
   }
 }

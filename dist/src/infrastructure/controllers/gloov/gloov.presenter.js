@@ -23,7 +23,7 @@ class createAccountPresenter {
 __decorate([
     swagger_1.ApiProperty(),
     __metadata("design:type", String)
-], createAccountPresenter.prototype, "address", void 0);
+], createAccountPresenter.prototype, "publicKey", void 0);
 __decorate([
     swagger_1.ApiProperty(),
     __metadata("design:type", String)

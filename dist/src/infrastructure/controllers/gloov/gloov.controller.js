@@ -20,8 +20,9 @@ const usecases_proxy_module_1 = require("../../usecases-proxy/usecases-proxy.mod
 const gloov_presenter_1 = require("./gloov.presenter");
 const response_decorator_1 = require("../../../infrastructure/common/swagger/response.decorator");
 const gloov_dto_1 = require("./gloov.dto");
+const statusBlockchain_usecases_1 = require("../../../usecases/blockchain/statusBlockchain.usecases");
 let GloovController = class GloovController {
-    constructor(getBalanceUsecaseProxy, createAccountUsecaseProxy, sendTransactiontUsecaseProxy, WithdrawalsUsecaseProxy, ReturnUserUsecaseProxy, cashReturnUsecaseProxy, addTokensUsecaseProxy, addTokensChargeBackUsecaseProxy, addTokensBondsUsecaseProxy, addBondsUsecaseProxy, transitTokensUsecaseProxy) {
+    constructor(getBalanceUsecaseProxy, createAccountUsecaseProxy, sendTransactiontUsecaseProxy, WithdrawalsUsecaseProxy, ReturnUserUsecaseProxy, cashReturnUsecaseProxy, addTokensUsecaseProxy, addTokensChargeBackUsecaseProxy, addTokensBondsUsecaseProxy, addBondsUsecaseProxy, transitTokensUsecaseProxy, statusUsecaseProxy) {
         this.getBalanceUsecaseProxy = getBalanceUsecaseProxy;
         this.createAccountUsecaseProxy = createAccountUsecaseProxy;
         this.sendTransactiontUsecaseProxy = sendTransactiontUsecaseProxy;
@@ -33,6 +34,7 @@ let GloovController = class GloovController {
         this.addTokensBondsUsecaseProxy = addTokensBondsUsecaseProxy;
         this.addBondsUsecaseProxy = addBondsUsecaseProxy;
         this.transitTokensUsecaseProxy = transitTokensUsecaseProxy;
+        this.statusUsecaseProxy = statusUsecaseProxy;
     }
     async getBalance(address) {
         const balance = await this.getBalanceUsecaseProxy.getInstance().execute(address);
@@ -43,7 +45,7 @@ let GloovController = class GloovController {
     async createAccount() {
         const account = await this.createAccountUsecaseProxy.getInstance().execute();
         const response = new gloov_presenter_1.createAccountPresenter();
-        response.address = account.address;
+        response.publicKey = account.address;
         response.privateKey = account.privateKey;
         return response;
     }
@@ -110,6 +112,10 @@ let GloovController = class GloovController {
         const response = new gloov_presenter_1.transactionPresenter();
         response.txHash = transaction;
         return response;
+    }
+    async status() {
+        const status = await this.statusUsecaseProxy.getInstance().execute();
+        return status;
     }
 };
 __decorate([
@@ -217,6 +223,13 @@ __decorate([
     __metadata("design:paramtypes", [gloov_dto_1.SendTransactinoDto]),
     __metadata("design:returntype", Promise)
 ], GloovController.prototype, "addBonds", null);
+__decorate([
+    common_1.Get('livess'),
+    swagger_1.ApiOperation({ description: 'Este servicio retorna el estado de la blockchain.' }),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], GloovController.prototype, "status", null);
 GloovController = __decorate([
     common_1.Controller('gloov'),
     swagger_1.ApiTags('Blockchain'),
@@ -233,7 +246,9 @@ GloovController = __decorate([
     __param(8, common_1.Inject(usecases_proxy_module_1.UsecasesProxyModule.ADD_TOKENS_BONDS)),
     __param(9, common_1.Inject(usecases_proxy_module_1.UsecasesProxyModule.ADD_BONDS)),
     __param(10, common_1.Inject(usecases_proxy_module_1.UsecasesProxyModule.TRANSIT_TOKENS)),
+    __param(11, common_1.Inject(usecases_proxy_module_1.UsecasesProxyModule.STATUS)),
     __metadata("design:paramtypes", [usecases_proxy_1.UseCaseProxy,
+        usecases_proxy_1.UseCaseProxy,
         usecases_proxy_1.UseCaseProxy,
         usecases_proxy_1.UseCaseProxy,
         usecases_proxy_1.UseCaseProxy,
