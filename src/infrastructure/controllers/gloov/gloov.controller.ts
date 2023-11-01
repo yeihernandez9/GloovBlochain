@@ -66,7 +66,7 @@ export class GloovController {
     private readonly statusUsecaseProxy: UseCaseProxy<StatusBlockchainUseCases>
   ) { }
 
-  @Get('account/balance/')
+  @Get('account/balance')
   //@ApiBearerAuth() 
   //@UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'Este servicio retorna el balance de monedas que tiene un usuario en la aplicación.' })
