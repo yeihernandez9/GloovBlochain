@@ -22,7 +22,7 @@ async function bootstrap() {
 
   // interceptors
   app.useGlobalInterceptors(new LoggingInterceptor(new LoggerService()));
-  app.useGlobalInterceptors(new ResponseInterceptor());
+  //app.useGlobalInterceptors(new ResponseInterceptor());
 
   // base routing
   app.setGlobalPrefix('api');

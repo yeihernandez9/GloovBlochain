@@ -18,6 +18,7 @@ export class WithdrawalsUseCases {
     if (value != 0) {
       if (address != addressWithDrawal) {
         const balance = await this.blockchainService.balances(address, this.ws);
+        console.log(balance)
         this.logger.log('WithdrawalsUseCases execute', `address: ${address}, balance: ${balance}`);
         if (balance >= 0 && value <= balance) {
           this.logger.log('WithdrawalsUseCases execute', `se puede hacer la tansaccinos `);

@@ -32,6 +32,7 @@ import { AddTokensBondsUseCases } from '../../../usecases/gloov/addTokensBonds.u
 import { AddBoundsUseCases } from '../../../usecases/gloov/addBounds.usecases';
 import { TransitTokensUseCases } from '../../../usecases/gloov/transitTokens.usecases';
 import { StatusBlockchainUseCases } from 'src/usecases/blockchain/statusBlockchain.usecases';
+import { ApiResponsegType } from 'src/infrastructure/common/swagger/responseg.decorators';
 
 @Controller()
 @ApiTags('Blockchain')
@@ -65,11 +66,11 @@ export class GloovController {
     private readonly statusUsecaseProxy: UseCaseProxy<StatusBlockchainUseCases>
   ) { }
 
-  @Get('account/getBalance/')
-  //@ApiBearerAuth()
+  @Get('account/balance/')
+  //@ApiBearerAuth() 
   //@UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'Este servicio retorna el balance de monedas que tiene un usuario en la aplicación.' })
-  @ApiResponseType(IsGloovBalancePresenter, false)
+  @ApiResponsegType(IsGloovBalancePresenter, true)
   async getBalance(@Query('account') account: string) {
     const balance = await this.getBalanceUsecaseProxy.getInstance().execute(account);
     const response = new IsGloovBalancePresenter();
@@ -81,8 +82,10 @@ export class GloovController {
   //@ApiBearerAuth()
   //@UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'Este servicio retorna las llaves pública y privada de un usuario recien creado.' })
+  @ApiResponseType(createAccountPresenter, false)
   async createAccount() {
     const account = await this.createAccountUsecaseProxy.getInstance().execute();
+    console.log(account)
     const response = new createAccountPresenter();
     response.publicKey = account.address;
     response.privateKey = account.privateKey;
@@ -90,13 +93,13 @@ export class GloovController {
   }
 
 
-  @Get('account/transitTokens/:address')
+  @Get('account/transitTokens')
   //@ApiBearerAuth()
   //@UseGuards(JwtAuthGuard)
   @ApiResponseType(transitTokensPresenter, false)
   @ApiOperation({ description: 'Este servicio realiza la consulta del saldo en transito para retiro.' })
-  async transitTokens(@Param('address') address: string) {
-    const account = await this.transitTokensUsecaseProxy.getInstance().execute(address);
+  async transitTokens(@Query('publicKey') publicKey: string) {
+    const account = await this.transitTokensUsecaseProxy.getInstance().execute(publicKey);
     const response = new transitTokensPresenter();
     response.available = account.available.toFixed(2);
     response.transit = account.transit.toFixed(2);

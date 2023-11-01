@@ -10,12 +10,12 @@ export class GetBalanceUseCases {
     private readonly blockchainService: IBlockchainService,
   ) { }
 
-  async execute(address: string): Promise<number> {
+  async execute(address: string): Promise<any> {
     try {
       const ws = this.gloovConfig.getWeb3Url();
       const balance = await this.blockchainService.balances(address, ws);
       this.logger.log('getBalanceUseCases execute', `balance: ${balance}`);
-      return balance;
+      return { "balance": balance };
     } catch (error) {
       this.logger.error('Error al obtener el balance:', error);
       throw new NotFoundException("Error al obtener el balance:" + error);

@@ -27,9 +27,9 @@ export declare class GloovController {
     private readonly transitTokensUsecaseProxy;
     private readonly statusUsecaseProxy;
     constructor(getBalanceUsecaseProxy: UseCaseProxy<GetBalanceUseCases>, createAccountUsecaseProxy: UseCaseProxy<CreateAccountUseCases>, sendTransactiontUsecaseProxy: UseCaseProxy<SendTransactionUseCases>, WithdrawalsUsecaseProxy: UseCaseProxy<WithdrawalsUseCases>, ReturnUserUsecaseProxy: UseCaseProxy<ReturnUserUseCases>, cashReturnUsecaseProxy: UseCaseProxy<CashReturnUseCases>, addTokensUsecaseProxy: UseCaseProxy<AddTokensUseCases>, addTokensChargeBackUsecaseProxy: UseCaseProxy<AddTokensChargeBackUseCases>, addTokensBondsUsecaseProxy: UseCaseProxy<AddTokensBondsUseCases>, addBondsUsecaseProxy: UseCaseProxy<AddBoundsUseCases>, transitTokensUsecaseProxy: UseCaseProxy<TransitTokensUseCases>, statusUsecaseProxy: UseCaseProxy<StatusBlockchainUseCases>);
-    getBalance(account: string): Promise<number>;
+    getBalance(account: string): Promise<any>;
     createAccount(): Promise<createAccountPresenter>;
-    transitTokens(address: string): Promise<transitTokensPresenter>;
+    transitTokens(publicKey: string): Promise<transitTokensPresenter>;
     sendTransaction(sendTransactinoDto: SendTransactinoDto): Promise<transactionPresenter>;
     withdrawals(sendTransactinoDto: SendTransactinoDto): Promise<transactionPresenter>;
     returnUser(sendTransactinoDto: SendTransactinoDto): Promise<transactionPresenter>;

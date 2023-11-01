@@ -6,5 +6,5 @@ export declare class GetBalanceUseCases {
     private readonly logger;
     private readonly blockchainService;
     constructor(gloovConfig: GloovConfig, logger: ILogger, blockchainService: IBlockchainService);
-    execute(address: string): Promise<number>;
+    execute(address: string): Promise<any>;
 }

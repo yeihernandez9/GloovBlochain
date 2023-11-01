@@ -16,7 +16,6 @@ async function bootstrap() {
     app.useGlobalFilters(new exception_filter_1.AllExceptionFilter(new logger_service_1.LoggerService()));
     app.useGlobalPipes(new common_1.ValidationPipe());
     app.useGlobalInterceptors(new logger_interceptor_1.LoggingInterceptor(new logger_service_1.LoggerService()));
-    app.useGlobalInterceptors(new response_interceptor_1.ResponseInterceptor());
     app.setGlobalPrefix('api');
     if (env !== 'production') {
         const config = new swagger_1.DocumentBuilder()
