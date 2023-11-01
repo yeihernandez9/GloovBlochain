@@ -28,11 +28,11 @@ class AddTokensBondsUseCases {
             }
             else {
                 this.logger.log('AddTokensBondsUseCases execute', `no tiene balance `);
-                throw new common_1.NotFoundException("no tiene balance");
+                throw new common_1.BadRequestException("no tiene balance");
             }
         }
         else {
-            throw new common_1.NotFoundException("No se permiten transacciones en CEROS");
+            throw new common_1.BadRequestException("No se permiten transacciones en CEROS");
         }
     }
 }

@@ -1,7 +1,7 @@
 import { GloovConfig } from './../../domain/web3/gloov.interface';
 import { ILogger } from '../../domain/logger/logger.interface';
 import { IBlockchainService } from '../../domain/adapters/blockchain.interface';
-import { NotFoundException } from '@nestjs/common';
+import { BadRequestException, NotFoundException } from '@nestjs/common';
 
 export class ReturnUserUseCases {
   ws: string = this.gloovConfig.getWeb3Url();
@@ -37,14 +37,14 @@ export class ReturnUserUseCases {
           return transaction.transactionHash;
         } else {
           this.logger.log('ReturnUserUseCases execute', `no tiene balance `);
-          throw new NotFoundException(`No tiene balance `);
+          throw new BadRequestException(`No tiene balance `);
         }
       } else {
-        throw new NotFoundException("No se permiten transacciones en CEROS");
+        throw new BadRequestException("No se permiten transacciones en CEROS");
       }
     } else {
 
-      throw new NotFoundException("No se puede enviar a las mismas billeteras");
+      throw new BadRequestException("No se puede enviar a las mismas billeteras");
     }
 
   }

@@ -33,6 +33,7 @@ import { AddBoundsUseCases } from '../../../usecases/gloov/addBounds.usecases';
 import { TransitTokensUseCases } from '../../../usecases/gloov/transitTokens.usecases';
 import { StatusBlockchainUseCases } from 'src/usecases/blockchain/statusBlockchain.usecases';
 import { ApiResponsegType } from 'src/infrastructure/common/swagger/responseg.decorators';
+import { Big, BigDecimal } from 'bigdecimal.js';
 
 @Controller()
 @ApiTags('Blockchain')
@@ -75,7 +76,7 @@ export class GloovController {
     const balance = await this.getBalanceUsecaseProxy.getInstance().execute(account);
     const response = new IsGloovBalancePresenter();
     response.balance = balance;
-    return balance;
+    return response;
   }
 
   @Get('account/createAccount')
@@ -101,9 +102,9 @@ export class GloovController {
   async transitTokens(@Query('publicKey') publicKey: string) {
     const account = await this.transitTokensUsecaseProxy.getInstance().execute(publicKey);
     const response = new transitTokensPresenter();
-    response.available = account.available.toFixed(2);
-    response.transit = account.transit.toFixed(2);
-    response.total = account.total
+    response.available = parseFloat(account.available.toFixed(2));
+    response.transit = parseFloat(account.transit.toFixed(2));
+    response.total = parseFloat(account.total)
     return response;
   }
 

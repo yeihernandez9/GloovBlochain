@@ -1,4 +1,7 @@
+import { Big } from 'big.js';
 import { ApiProperty } from '@nestjs/swagger';
+import { Double } from 'typeorm';
+import Decimal from 'decimal.js';
 export class IsGloovBalancePresenter {
   @ApiProperty()
   balance: number;

@@ -27,15 +27,15 @@ class ReturnUserUseCases {
                 }
                 else {
                     this.logger.log('ReturnUserUseCases execute', `no tiene balance `);
-                    throw new common_1.NotFoundException(`No tiene balance `);
+                    throw new common_1.BadRequestException(`No tiene balance `);
                 }
             }
             else {
-                throw new common_1.NotFoundException("No se permiten transacciones en CEROS");
+                throw new common_1.BadRequestException("No se permiten transacciones en CEROS");
             }
         }
         else {
-            throw new common_1.NotFoundException("No se puede enviar a las mismas billeteras");
+            throw new common_1.BadRequestException("No se puede enviar a las mismas billeteras");
         }
     }
 }

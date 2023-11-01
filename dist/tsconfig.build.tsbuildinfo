@@ -3277,7 +3277,7 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/getbalance.usecases.ts": {
-        "version": "fc0d442e3001d0fb636baf047a4e55b0dbd5d137c9b8087a32511e38ab5390c1",
+        "version": "4440a865c33d304f6573a337815c155a59678617ca88e745e4856ce5b59c684c",
         "signature": "7c6574bfeb4a8a958765538c8a09a2cd0e1e24f4c98c60c089ce72ecb6486f96",
         "affectsGlobalScope": false
       },
@@ -4217,12 +4217,12 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/repositories/todo.repository.ts": {
-        "version": "2aaafde73f4ee03cadb4a6fd806597c85b1d6076867ee28397a1ae4c5c2b6471",
+        "version": "ec0c6f6115b859473b0467c051b1a29510883e3371dd5203d4785d932be6177e",
         "signature": "2bbf3c0193a34dfd59eac8df73806e9ab8e40ce1228c71bae94296be73d848fd",
         "affectsGlobalScope": false
       },
       "../src/infrastructure/repositories/user.repository.ts": {
-        "version": "2fedcf44c863a845dc74d3577ba0bca4a6b8f74007e775e0cbe799776aa3a32f",
+        "version": "b02b7dd8c64b457dcf7a16e9df72b755476c42946f2b4aeae3f59cc5c491acd1",
         "signature": "b9434625372893e71db9fb1389de6cabc66d2b33a5900ec7813c5513267b8938",
         "affectsGlobalScope": false
       },
@@ -4257,7 +4257,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/services/blockchain/blockchain.service.ts": {
-        "version": "1160e2bb414b4d2f8a70c0564d22ad273922afda52b727ce1a69ea4bac23be39",
+        "version": "738c221920450770a24666699db1bf1025bbab1009fa1933c0da6dfc5cd03801",
         "signature": "9ba0ebd17c31b250de3b4d4b161070ef05734da49f67b0f205f1d1daaed81644",
         "affectsGlobalScope": false
       },
@@ -4267,12 +4267,12 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/withdrawals.usecases.ts": {
-        "version": "a4712a98033222d0e3680a28cafd8f50ef5e767d6617f0c32078ac2e4a679bb9",
+        "version": "ec51be3bfe3f1ec239a0a458c2b76d8c7293a6595b9bbd4c294675cd6bd08df3",
         "signature": "ec4b2547cee51a64681385724c34016cbb2330e933da32817a1b92f8358a1f75",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/returnuser.usecases.ts": {
-        "version": "0c0425ffed7e11e519ef47ffae5ac81d37ef331e788a6c29422a46d67d32c3f8",
+        "version": "a4919812a5d6fd296e7392e0d37cf6a72dcfd38f8cb797debb40a6fe5d60c2a6",
         "signature": "4fdb9afbf474557dfae28323853258c27621b5c8206579a9d2beeea43569e1b4",
         "affectsGlobalScope": false
       },
@@ -4287,12 +4287,12 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addtokenschargeback.usecases.ts": {
-        "version": "2f4721cec2f2e594a4b0f64ad4854df511374f4d5ff0990d73beb28ec1a33f86",
+        "version": "2d41c90d78bf2d4c4e3d1da13af90841709582a2d132af10cc3cdf58fe5ede19",
         "signature": "d9d315b5495858100d2c49f3410f003b5d950596f5b60c6cab8cec8977dabba5",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addtokensbonds.usecases.ts": {
-        "version": "9ff3aaaf366c6285be0c76d4bf3f2664e572b5eb1a517d8291a15d70dc9cf75d",
+        "version": "aaee666b3f9e89178f080bef920dc6a9261f220dc0b67e854b0f88ad5429b61a",
         "signature": "ca0b0356a5165dc5d7b623b729ad71e93ec3771fb5e80bc426c367a9b7eb4558",
         "affectsGlobalScope": false
       },
@@ -4312,7 +4312,7 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/transittokens.usecases.ts": {
-        "version": "be2b01c5c12e09d7c51226993957e0520291f937d0192900f5b47f507fa23c53",
+        "version": "0541261b7e6516e0227ebea664db015cf29be0a2dd28d12ad1b713ae6bffede9",
         "signature": "d7b01f5e639e8624cca35ba8419384ca0088d6d4be991919fd9aadeb289e24ad",
         "affectsGlobalScope": false
       },
@@ -5097,7 +5097,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/controllers/gloov/gloov.presenter.ts": {
-        "version": "248cb82008a9a69ccf79109d8f8f578458df6772eac3932b631d74a2d0ad390e",
+        "version": "c071e785c0c41b43ac944c368b906d8de2fdea9f6c02d69391429cbd421fdf7d",
         "signature": "1985b434fc0cc29af7dbe343a76c70675b6392dfdd3fefe31ba10dfa0182192e",
         "affectsGlobalScope": false
       },
@@ -5111,9 +5111,14 @@
         "signature": "5faa1473ed72ccd6f391380c8e44e505a23add4cff207c151924328356a05d58",
         "affectsGlobalScope": false
       },
+      "../node_modules/bigdecimal.js/lib/bigdecimal.d.ts": {
+        "version": "a4add0c5b68b012f33ac00efd54016cb455f7efea4e19241ffdd72cfda9dcf17",
+        "signature": "a4add0c5b68b012f33ac00efd54016cb455f7efea4e19241ffdd72cfda9dcf17",
+        "affectsGlobalScope": false
+      },
       "../src/infrastructure/controllers/gloov/gloov.controller.ts": {
-        "version": "742b03b61c1810609cc288196592c9f0212a991e701ae18d20d19351f43a92fc",
-        "signature": "1d912b00deffb1011d6c60465f450491cbc1cf24ea73b214d3d9fd240bc476e2",
+        "version": "ababe9be19f0d9d17bc119cf4d5dbd7545578a2a6a64e015bae0df20ffbeb066",
+        "signature": "83a3e19cbeb7c3160ae507b25d4f3a8813095baa418d4c43c110aade800d71d8",
         "affectsGlobalScope": false
       },
       "../src/infrastructure/controllers/controllers.module.ts": {
@@ -5367,7 +5372,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/config/typeorm/typeorm.config.ts": {
-        "version": "1f1507e8ccb6728bcd53b9ea2162c03f811f0e8ede5f268a5258f2ab4b501dcc",
+        "version": "2b6b1c5a3c4dce8596c24d756014758096ee88db65f1fada300fa3ecb9ae82f8",
         "signature": "26609a672cfb61968fce39ff554ca997988dfb0b6cdd2108e30e11abe210081c",
         "affectsGlobalScope": false
       },
@@ -9535,6 +9540,7 @@
       "../src/infrastructure/controllers/gloov/gloov.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/swagger/index.d.ts",
+        "../node_modules/bigdecimal.js/lib/bigdecimal.d.ts",
         "../node_modules/web3-types/lib/commonjs/eth_types.d.ts",
         "../src/infrastructure/common/guards/jwtauth.guard.ts",
         "../src/infrastructure/common/swagger/response.decorator.ts",
@@ -9561,7 +9567,9 @@
         "../node_modules/class-validator/types/index.d.ts"
       ],
       "../src/infrastructure/controllers/gloov/gloov.presenter.ts": [
-        "../node_modules/@nestjs/swagger/index.d.ts"
+        "../node_modules/@nestjs/swagger/index.d.ts",
+        "../node_modules/decimal.js/decimal.d.ts",
+        "../node_modules/typeorm/index.d.ts"
       ],
       "../src/infrastructure/controllers/todo/todo.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -14241,6 +14249,7 @@
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
       "../node_modules/axios/index.d.ts",
+      "../node_modules/bigdecimal.js/lib/bigdecimal.d.ts",
       "../node_modules/class-transformer/types/classtransformer.d.ts",
       "../node_modules/class-transformer/types/decorators/exclude.decorator.d.ts",
       "../node_modules/class-transformer/types/decorators/expose.decorator.d.ts",
