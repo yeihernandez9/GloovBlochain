@@ -1,7 +1,7 @@
 import { GloovConfig } from './../../domain/web3/gloov.interface';
 import { ILogger } from '../../domain/logger/logger.interface';
 import { IBlockchainService } from '../../domain/adapters/blockchain.interface';
-import { NotFoundException } from '@nestjs/common';
+import { BadRequestException, NotFoundException } from '@nestjs/common';
 
 export class GetBalanceUseCases {
   constructor(
@@ -18,7 +18,7 @@ export class GetBalanceUseCases {
       return { "balance": balance };
     } catch (error) {
       this.logger.error('Error al obtener el balance:', error);
-      throw new NotFoundException("Error al obtener el balance:" + error);
+      throw new BadRequestException("Error al obtener el balance:" + error);
     }
   }
 }

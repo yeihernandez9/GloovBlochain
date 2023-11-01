@@ -1,7 +1,7 @@
 import { GloovConfig } from '../../domain/web3/gloov.interface';
 import { ILogger } from '../../domain/logger/logger.interface';
 import { IBlockchainService } from '../../domain/adapters/blockchain.interface';
-import { NotFoundException } from '@nestjs/common';
+import { BadRequestException, NotFoundException } from '@nestjs/common';
 
 export class AddBoundsUseCases {
   ws: string = this.gloovConfig.getWeb3Url();
@@ -36,10 +36,10 @@ export class AddBoundsUseCases {
         return transaction.transactionHash;
       } else {
         this.logger.log('AddTokensUseCases execute', `no tiene balance `);
-        throw new NotFoundException("no tiene balance");
+        throw new BadRequestException("no tiene balance");
       }
     } else {
-      throw new NotFoundException("No se permiten transacciones en CEROS");
+      throw new BadRequestException("No se permiten transacciones en CEROS");
     }
 
   }

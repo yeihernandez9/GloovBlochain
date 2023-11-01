@@ -17,7 +17,7 @@ class CreateAccountUseCases {
         }
         catch (error) {
             this.logger.error('Error create account:', error);
-            throw new common_1.NotFoundException("No se puede crear billetera");
+            throw new common_1.BadRequestException("No se puede crear billetera");
         }
     }
 }

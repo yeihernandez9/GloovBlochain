@@ -25,7 +25,7 @@ let AllExceptionFilter = class AllExceptionFilter {
             ? exception.getResponse()
             : { message: exception.message, code_error: null };
         const responseData = Object.assign({
-            statusCode: status,
+            status: status,
             timestamp: new Date().toISOString(),
             path: request.url,
         }, message);

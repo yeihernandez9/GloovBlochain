@@ -17,7 +17,7 @@ class GetBalanceUseCases {
         }
         catch (error) {
             this.logger.error('Error al obtener el balance:', error);
-            throw new common_1.NotFoundException("Error al obtener el balance:" + error);
+            throw new common_1.BadRequestException("Error al obtener el balance:" + error);
         }
     }
 }

@@ -3277,7 +3277,7 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/getbalance.usecases.ts": {
-        "version": "468ac170854cacba2d9f9fbbd486c0d0ba11d5e0045dbb678f2eac436f3f97b8",
+        "version": "fc0d442e3001d0fb636baf047a4e55b0dbd5d137c9b8087a32511e38ab5390c1",
         "signature": "7c6574bfeb4a8a958765538c8a09a2cd0e1e24f4c98c60c089ce72ecb6486f96",
         "affectsGlobalScope": false
       },
@@ -4217,12 +4217,12 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/repositories/todo.repository.ts": {
-        "version": "327fdaa140cc49211e87036d41619f2188d7054c28185dbba4bf71663a8107c4",
+        "version": "2aaafde73f4ee03cadb4a6fd806597c85b1d6076867ee28397a1ae4c5c2b6471",
         "signature": "2bbf3c0193a34dfd59eac8df73806e9ab8e40ce1228c71bae94296be73d848fd",
         "affectsGlobalScope": false
       },
       "../src/infrastructure/repositories/user.repository.ts": {
-        "version": "9cce9a1cc6cf49cdab98e78b504b379d63a639d0b58e78b804a41d7ed5fa67ed",
+        "version": "2fedcf44c863a845dc74d3577ba0bca4a6b8f74007e775e0cbe799776aa3a32f",
         "signature": "b9434625372893e71db9fb1389de6cabc66d2b33a5900ec7813c5513267b8938",
         "affectsGlobalScope": false
       },
@@ -4247,17 +4247,17 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/createaccount.usecases.ts": {
-        "version": "d627d1dd5ad55dd3944a8e83362bfba9a82bf61b3553421360dbfded26bb0902",
+        "version": "899f3b82f1a1d117bc3ef54ff8352bd2319dafb4a49e74127b68c1f08a5df44c",
         "signature": "c8eb8e4b9c0ca2573dba3e6442b57f1e7bcfae9c966c364634eaba78b7558e62",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/sendtransaction.usecases.ts": {
-        "version": "2408208a0c291240b5e35acea4f8477d2ae20937ff9a58f64bac77c5dd594db1",
+        "version": "8b34fcb25f5bb01b8da948a2ce1885de6a0904bbdb4c856e4442548429c25dc9",
         "signature": "11d2e705fcf3adc387df810319549316811ee1246181faf5e47ae5d5c93d1484",
         "affectsGlobalScope": false
       },
       "../src/infrastructure/services/blockchain/blockchain.service.ts": {
-        "version": "7a63039bc69dac9f91998f85dc89ba13af67b355d59e2288f202de15e2eed562",
+        "version": "1160e2bb414b4d2f8a70c0564d22ad273922afda52b727ce1a69ea4bac23be39",
         "signature": "9ba0ebd17c31b250de3b4d4b161070ef05734da49f67b0f205f1d1daaed81644",
         "affectsGlobalScope": false
       },
@@ -4267,7 +4267,7 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/withdrawals.usecases.ts": {
-        "version": "a4a43ff782393c26e545ceb05c3d504070bb846623fcf983ba293d1ee25b82a4",
+        "version": "a4712a98033222d0e3680a28cafd8f50ef5e767d6617f0c32078ac2e4a679bb9",
         "signature": "ec4b2547cee51a64681385724c34016cbb2330e933da32817a1b92f8358a1f75",
         "affectsGlobalScope": false
       },
@@ -4277,12 +4277,12 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/cashreturn.usecases.ts": {
-        "version": "337e0dcb064d20dd19cec4157dde8eb19c8e37d04569de6bb52d763b05726e19",
+        "version": "208f823026124c543bfe39176b66dbb3e70ed266522079eeed8d3c3eb824ea1d",
         "signature": "a0aca78b80124006866fd6c502355293ab792ec205567d8f8ca261511948b3b7",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addtokens.usecases.ts": {
-        "version": "36467eb4f418ffbf25d6733d491681c9bce0dcb6e9a815b03cf2f5e7c7b50a9c",
+        "version": "1f9513219ffaa780f61facc9b79a003a6299363493e2436067a0c697793e1800",
         "signature": "fccfaf97c20af65c351ad534fe7f7d375327f6e23a0ba36e3d49e0ac8463cc8c",
         "affectsGlobalScope": false
       },
@@ -4297,7 +4297,7 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addbounds.usecases.ts": {
-        "version": "8ec5493561dcd99aa08324a98eff6865973c7e6ea9c3d554a1aa6d6009ddea70",
+        "version": "4bcfe5740a95d26014d9000afd0ae5db965500db57886bb3c9c5673844df57bd",
         "signature": "1f41c178f4bfeae5504e9de533dedbfbcba96aeaf8514499e337e3b53420d18a",
         "affectsGlobalScope": false
       },
@@ -5112,7 +5112,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/controllers/gloov/gloov.controller.ts": {
-        "version": "cbd274568b25cd377392a8b87c375225c38ff208e1f567200a00e6eff165f6df",
+        "version": "742b03b61c1810609cc288196592c9f0212a991e701ae18d20d19351f43a92fc",
         "signature": "1d912b00deffb1011d6c60465f450491cbc1cf24ea73b214d3d9fd240bc476e2",
         "affectsGlobalScope": false
       },
@@ -5347,7 +5347,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/common/filter/exception.filter.ts": {
-        "version": "40f1cbdb3b1d5e7d1a40575916f781350ea3da016320586f6eb1ca3026fce241",
+        "version": "e7c5d934f8b4059767e555a028d62dd15e01c413a6b8d8b57c60b6712a2de940",
         "signature": "b79c9ddb9e4c045aff7914ac72634fd8ef7e7d64ae2226c09ad26662560e4c09",
         "affectsGlobalScope": false
       },
@@ -5367,7 +5367,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/config/typeorm/typeorm.config.ts": {
-        "version": "e71e3dd8d3ef79e753f4036fd26f5840a7ad6ecea8c6d693aeeeea122867dc67",
+        "version": "1f1507e8ccb6728bcd53b9ea2162c03f811f0e8ede5f268a5258f2ab4b501dcc",
         "signature": "26609a672cfb61968fce39ff554ca997988dfb0b6cdd2108e30e11abe210081c",
         "affectsGlobalScope": false
       },
