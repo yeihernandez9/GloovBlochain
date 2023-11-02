@@ -12,6 +12,7 @@ import { LocalStrategy } from './infrastructure/common/strategies/local.strategy
 import { JwtStrategy } from './infrastructure/common/strategies/jwt.strategy';
 import { JwtRefreshTokenStrategy } from './infrastructure/common/strategies/jwtRefresh.strategy';
 import { BlockchainModule } from './infrastructure/services/blockchain/blockchain.module';
+import { AuditModule } from './infrastructure/audit/audit.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { BlockchainModule } from './infrastructure/services/blockchain/blockchai
     JwtServiceModule,
     EnvironmentConfigModule,
     BlockchainModule,
+    AuditModule,
   ],
   providers: [LocalStrategy, JwtStrategy, JwtRefreshTokenStrategy],
 })
