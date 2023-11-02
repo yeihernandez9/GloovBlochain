@@ -29,14 +29,10 @@ __decorate([
 ], SendTransactinoDto.prototype, "pkOrigin", void 0);
 __decorate([
     swagger_1.ApiProperty({ required: true }),
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsString(),
     __metadata("design:type", String)
 ], SendTransactinoDto.prototype, "accDestiny", void 0);
 __decorate([
     swagger_1.ApiProperty({ required: true }),
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsNumber(),
     __metadata("design:type", Number)
 ], SendTransactinoDto.prototype, "value", void 0);
 exports.SendTransactinoDto = SendTransactinoDto;

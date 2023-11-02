@@ -22,11 +22,11 @@ export class AllExceptionFilter implements ExceptionFilter {
 
     const responseData = {
       ...{
+        msg: (exception as Error).message,
         status: status,
         timestamp: new Date().toISOString(),
         path: request.url,
       },
-      ...message,
     };
 
     this.logMessage(request, message, status, exception);

@@ -25,10 +25,11 @@ let AllExceptionFilter = class AllExceptionFilter {
             ? exception.getResponse()
             : { message: exception.message, code_error: null };
         const responseData = Object.assign({
+            msg: exception.message,
             status: status,
             timestamp: new Date().toISOString(),
             path: request.url,
-        }, message);
+        });
         this.logMessage(request, message, status, exception);
         response.status(status).json(responseData);
     }
