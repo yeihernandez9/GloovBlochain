@@ -40,6 +40,7 @@ import { AddTokensBondsUseCases } from '../../usecases/gloov/addTokensBonds.usec
 import { AddBoundsUseCases } from '../../usecases/gloov/addBounds.usecases';
 import { TransitTokensUseCases } from '../../usecases/gloov/transitTokens.usecases';
 import { StatusBlockchainUseCases } from 'src/usecases/blockchain/statusBlockchain.usecases';
+import { DatabaseAuditRepository } from '../repositories/audit.repository';
 
 @Module({
   imports: [
@@ -154,52 +155,52 @@ export class UsecasesProxyModule {
             new UseCaseProxy(new CreateAccountUseCases(config, logger, blockchainService)),
         },
         {
-          inject: [LoggerService, EnvironmentConfigService, BlockchainService],
+          inject: [LoggerService, EnvironmentConfigService, BlockchainService, DatabaseAuditRepository],
           provide: UsecasesProxyModule.SEND_TRANSACTION,
-          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService) =>
-            new UseCaseProxy(new SendTransactionUseCases(config, logger, blockchainService)),
+          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService, auditRepository: DatabaseAuditRepository) =>
+            new UseCaseProxy(new SendTransactionUseCases(config, logger, blockchainService, auditRepository)),
         },
         {
-          inject: [LoggerService, EnvironmentConfigService, BlockchainService],
+          inject: [LoggerService, EnvironmentConfigService, BlockchainService, DatabaseAuditRepository],
           provide: UsecasesProxyModule.WITHDRAWALS,
-          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService) =>
-            new UseCaseProxy(new WithdrawalsUseCases(config, logger, blockchainService)),
+          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService, auditRepository: DatabaseAuditRepository) =>
+            new UseCaseProxy(new WithdrawalsUseCases(config, logger, blockchainService, auditRepository)),
         },
         {
-          inject: [LoggerService, EnvironmentConfigService, BlockchainService],
+          inject: [LoggerService, EnvironmentConfigService, BlockchainService, DatabaseAuditRepository],
           provide: UsecasesProxyModule.RETURN_USER,
-          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService) =>
-            new UseCaseProxy(new ReturnUserUseCases(config, logger, blockchainService)),
+          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService, auditRepository: DatabaseAuditRepository) =>
+            new UseCaseProxy(new ReturnUserUseCases(config, logger, blockchainService, auditRepository)),
         },
         {
-          inject: [LoggerService, EnvironmentConfigService, BlockchainService],
+          inject: [LoggerService, EnvironmentConfigService, BlockchainService, DatabaseAuditRepository],
           provide: UsecasesProxyModule.CASH_RETURN,
-          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService) =>
-            new UseCaseProxy(new CashReturnUseCases(config, logger, blockchainService)),
+          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService, auditRepository: DatabaseAuditRepository) =>
+            new UseCaseProxy(new CashReturnUseCases(config, logger, blockchainService, auditRepository)),
         },
         {
-          inject: [LoggerService, EnvironmentConfigService, BlockchainService],
+          inject: [LoggerService, EnvironmentConfigService, BlockchainService, DatabaseAuditRepository],
           provide: UsecasesProxyModule.ADD_TOKENS,
-          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService) =>
-            new UseCaseProxy(new AddTokensUseCases(config, logger, blockchainService)),
+          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService, auditRepository: DatabaseAuditRepository) =>
+            new UseCaseProxy(new AddTokensUseCases(config, logger, blockchainService, auditRepository)),
         },
         {
-          inject: [LoggerService, EnvironmentConfigService, BlockchainService],
+          inject: [LoggerService, EnvironmentConfigService, BlockchainService, DatabaseAuditRepository],
           provide: UsecasesProxyModule.ADD_TOKENS_CHARGE_BACK,
-          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService) =>
-            new UseCaseProxy(new AddTokensChargeBackUseCases(config, logger, blockchainService)),
+          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService, auditRepository: DatabaseAuditRepository) =>
+            new UseCaseProxy(new AddTokensChargeBackUseCases(config, logger, blockchainService, auditRepository)),
         },
         {
-          inject: [LoggerService, EnvironmentConfigService, BlockchainService],
+          inject: [LoggerService, EnvironmentConfigService, BlockchainService, DatabaseAuditRepository],
           provide: UsecasesProxyModule.ADD_TOKENS_BONDS,
-          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService) =>
-            new UseCaseProxy(new AddTokensBondsUseCases(config, logger, blockchainService)),
+          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService, auditRepository: DatabaseAuditRepository) =>
+            new UseCaseProxy(new AddTokensBondsUseCases(config, logger, blockchainService, auditRepository)),
         },
         {
-          inject: [LoggerService, EnvironmentConfigService, BlockchainService],
+          inject: [LoggerService, EnvironmentConfigService, BlockchainService, DatabaseAuditRepository],
           provide: UsecasesProxyModule.ADD_BONDS,
-          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService) =>
-            new UseCaseProxy(new AddBoundsUseCases(config, logger, blockchainService)),
+          useFactory: (logger: LoggerService, config: EnvironmentConfigService, blockchainService: BlockchainService, auditRepository: DatabaseAuditRepository) =>
+            new UseCaseProxy(new AddBoundsUseCases(config, logger, blockchainService, auditRepository)),
         },
         {
           inject: [LoggerService, EnvironmentConfigService, BlockchainService, DatabaseBlockchainRepository],

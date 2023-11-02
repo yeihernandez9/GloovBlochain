@@ -10,7 +10,7 @@ export class DatabaseTodoRepository implements TodoRepository {
   constructor(
     @InjectRepository(Todo)
     private readonly todoEntityRepository: Repository<Todo>,
-  ) {}
+  ) { }
 
   async updateContent(id: number, isDone: boolean): Promise<void> {
     await this.todoEntityRepository.update(
@@ -24,7 +24,6 @@ export class DatabaseTodoRepository implements TodoRepository {
     const todoEntity = this.toTodoEntity(todo);
     const result = await this.todoEntityRepository.insert(todoEntity);
     return this.toTodo(result.generatedMaps[0] as Todo);
-    console.log(result.generatedMaps);
   }
   async findAll(): Promise<TodoM[]> {
     const todosEntity = await this.todoEntityRepository.find();

@@ -2,11 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AddTokensBondsUseCases = void 0;
 const common_1 = require("@nestjs/common");
+const auditRepository_interface_1 = require("../../domain/repositories/auditRepository.interface");
 class AddTokensBondsUseCases {
-    constructor(gloovConfig, logger, blockchainService) {
+    constructor(gloovConfig, logger, blockchainService, auditRepository) {
         this.gloovConfig = gloovConfig;
         this.logger = logger;
         this.blockchainService = blockchainService;
+        this.auditRepository = auditRepository;
         this.ws = this.gloovConfig.getWeb3Url();
     }
     async execute(pkOrigin, accDestiny, value) {
@@ -24,14 +26,17 @@ class AddTokensBondsUseCases {
                 this.logger.log('AddTokensBondsUseCases execute', `nonce: ${nonce}`);
                 const transaction = await this.blockchainService.transaction(address, nonce, addressDestiny, convertWei, '21000', '0', pkMaster, this.ws);
                 this.logger.log('AddTokensBondsUseCases execute', `Transaction hash: ${transaction.transactionHash}`);
+                await this.auditRepository.insert(`Transaction from: ${address} to: ${accDestiny} Result: hash: ${transaction.transactionHash}`, `AddTokensBondsUseCases`, value.toString());
                 return transaction.transactionHash;
             }
             else {
                 this.logger.log('AddTokensBondsUseCases execute', `no tiene balance `);
+                await this.auditRepository.insert(`No tiene balance: from: ${address} to: ${accDestiny}`, `AddTokensBondsUseCases`, value.toString());
                 throw new common_1.BadRequestException("no tiene balance");
             }
         }
         else {
+            await this.auditRepository.insert(`No se permiten transacciones en CEROS from: ${address} to: ${accDestiny}`, `AddTokensUseCases`, value.toString());
             throw new common_1.BadRequestException("No se permiten transacciones en CEROS");
         }
     }

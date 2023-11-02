@@ -16,13 +16,15 @@ const transactions_entity_1 = require("../entities/transactions.entity");
 const todo_repository_1 = require("./todo.repository");
 const user_repository_1 = require("./user.repository");
 const blockchain_repository_1 = require("./blockchain.repository");
+const audit_entity_1 = require("../entities/audit.entity");
+const audit_repository_1 = require("./audit.repository");
 let RepositoriesModule = class RepositoriesModule {
 };
 RepositoriesModule = __decorate([
     common_1.Module({
-        imports: [typeorm_module_1.TypeOrmConfigModule, typeorm_1.TypeOrmModule.forFeature([todo_entity_1.Todo, user_entity_1.User, transactions_entity_1.Transactions])],
-        providers: [todo_repository_1.DatabaseTodoRepository, user_repository_1.DatabaseUserRepository, blockchain_repository_1.DatabaseBlockchainRepository],
-        exports: [todo_repository_1.DatabaseTodoRepository, user_repository_1.DatabaseUserRepository, blockchain_repository_1.DatabaseBlockchainRepository],
+        imports: [typeorm_module_1.TypeOrmConfigModule, typeorm_1.TypeOrmModule.forFeature([todo_entity_1.Todo, user_entity_1.User, transactions_entity_1.Transactions, audit_entity_1.Audit])],
+        providers: [todo_repository_1.DatabaseTodoRepository, user_repository_1.DatabaseUserRepository, blockchain_repository_1.DatabaseBlockchainRepository, audit_repository_1.DatabaseAuditRepository],
+        exports: [todo_repository_1.DatabaseTodoRepository, user_repository_1.DatabaseUserRepository, blockchain_repository_1.DatabaseBlockchainRepository, audit_repository_1.DatabaseAuditRepository],
     })
 ], RepositoriesModule);
 exports.RepositoriesModule = RepositoriesModule;

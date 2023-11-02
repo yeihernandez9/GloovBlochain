@@ -46,6 +46,7 @@ const addTokensBonds_usecases_1 = require("../../usecases/gloov/addTokensBonds.u
 const addBounds_usecases_1 = require("../../usecases/gloov/addBounds.usecases");
 const transitTokens_usecases_1 = require("../../usecases/gloov/transitTokens.usecases");
 const statusBlockchain_usecases_1 = require("../../usecases/blockchain/statusBlockchain.usecases");
+const audit_repository_1 = require("../repositories/audit.repository");
 let UsecasesProxyModule = UsecasesProxyModule_1 = class UsecasesProxyModule {
     static register() {
         return {
@@ -107,44 +108,44 @@ let UsecasesProxyModule = UsecasesProxyModule_1 = class UsecasesProxyModule {
                     useFactory: (logger, config, blockchainService) => new usecases_proxy_1.UseCaseProxy(new createAccount_usecases_1.CreateAccountUseCases(config, logger, blockchainService)),
                 },
                 {
-                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService],
+                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService, audit_repository_1.DatabaseAuditRepository],
                     provide: UsecasesProxyModule_1.SEND_TRANSACTION,
-                    useFactory: (logger, config, blockchainService) => new usecases_proxy_1.UseCaseProxy(new sendTransaction_usecases_1.SendTransactionUseCases(config, logger, blockchainService)),
+                    useFactory: (logger, config, blockchainService, auditRepository) => new usecases_proxy_1.UseCaseProxy(new sendTransaction_usecases_1.SendTransactionUseCases(config, logger, blockchainService, auditRepository)),
                 },
                 {
-                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService],
+                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService, audit_repository_1.DatabaseAuditRepository],
                     provide: UsecasesProxyModule_1.WITHDRAWALS,
-                    useFactory: (logger, config, blockchainService) => new usecases_proxy_1.UseCaseProxy(new withdrawals_usecases_1.WithdrawalsUseCases(config, logger, blockchainService)),
+                    useFactory: (logger, config, blockchainService, auditRepository) => new usecases_proxy_1.UseCaseProxy(new withdrawals_usecases_1.WithdrawalsUseCases(config, logger, blockchainService, auditRepository)),
                 },
                 {
-                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService],
+                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService, audit_repository_1.DatabaseAuditRepository],
                     provide: UsecasesProxyModule_1.RETURN_USER,
-                    useFactory: (logger, config, blockchainService) => new usecases_proxy_1.UseCaseProxy(new returnUser_usecases_1.ReturnUserUseCases(config, logger, blockchainService)),
+                    useFactory: (logger, config, blockchainService, auditRepository) => new usecases_proxy_1.UseCaseProxy(new returnUser_usecases_1.ReturnUserUseCases(config, logger, blockchainService, auditRepository)),
                 },
                 {
-                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService],
+                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService, audit_repository_1.DatabaseAuditRepository],
                     provide: UsecasesProxyModule_1.CASH_RETURN,
-                    useFactory: (logger, config, blockchainService) => new usecases_proxy_1.UseCaseProxy(new cashReturn_usecases_1.CashReturnUseCases(config, logger, blockchainService)),
+                    useFactory: (logger, config, blockchainService, auditRepository) => new usecases_proxy_1.UseCaseProxy(new cashReturn_usecases_1.CashReturnUseCases(config, logger, blockchainService, auditRepository)),
                 },
                 {
-                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService],
+                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService, audit_repository_1.DatabaseAuditRepository],
                     provide: UsecasesProxyModule_1.ADD_TOKENS,
-                    useFactory: (logger, config, blockchainService) => new usecases_proxy_1.UseCaseProxy(new addTokens_usecases_1.AddTokensUseCases(config, logger, blockchainService)),
+                    useFactory: (logger, config, blockchainService, auditRepository) => new usecases_proxy_1.UseCaseProxy(new addTokens_usecases_1.AddTokensUseCases(config, logger, blockchainService, auditRepository)),
                 },
                 {
-                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService],
+                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService, audit_repository_1.DatabaseAuditRepository],
                     provide: UsecasesProxyModule_1.ADD_TOKENS_CHARGE_BACK,
-                    useFactory: (logger, config, blockchainService) => new usecases_proxy_1.UseCaseProxy(new addTokensChargeBack_usecases_1.AddTokensChargeBackUseCases(config, logger, blockchainService)),
+                    useFactory: (logger, config, blockchainService, auditRepository) => new usecases_proxy_1.UseCaseProxy(new addTokensChargeBack_usecases_1.AddTokensChargeBackUseCases(config, logger, blockchainService, auditRepository)),
                 },
                 {
-                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService],
+                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService, audit_repository_1.DatabaseAuditRepository],
                     provide: UsecasesProxyModule_1.ADD_TOKENS_BONDS,
-                    useFactory: (logger, config, blockchainService) => new usecases_proxy_1.UseCaseProxy(new addTokensBonds_usecases_1.AddTokensBondsUseCases(config, logger, blockchainService)),
+                    useFactory: (logger, config, blockchainService, auditRepository) => new usecases_proxy_1.UseCaseProxy(new addTokensBonds_usecases_1.AddTokensBondsUseCases(config, logger, blockchainService, auditRepository)),
                 },
                 {
-                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService],
+                    inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService, audit_repository_1.DatabaseAuditRepository],
                     provide: UsecasesProxyModule_1.ADD_BONDS,
-                    useFactory: (logger, config, blockchainService) => new usecases_proxy_1.UseCaseProxy(new addBounds_usecases_1.AddBoundsUseCases(config, logger, blockchainService)),
+                    useFactory: (logger, config, blockchainService, auditRepository) => new usecases_proxy_1.UseCaseProxy(new addBounds_usecases_1.AddBoundsUseCases(config, logger, blockchainService, auditRepository)),
                 },
                 {
                     inject: [logger_service_1.LoggerService, environment_config_service_1.EnvironmentConfigService, blockchain_service_1.BlockchainService, blockchain_repository_1.DatabaseBlockchainRepository],

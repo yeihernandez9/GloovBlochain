@@ -2,11 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CashReturnUseCases = void 0;
 const common_1 = require("@nestjs/common");
+const auditRepository_interface_1 = require("../../domain/repositories/auditRepository.interface");
 class CashReturnUseCases {
-    constructor(gloovConfig, logger, blockchainService) {
+    constructor(gloovConfig, logger, blockchainService, auditRepository) {
         this.gloovConfig = gloovConfig;
         this.logger = logger;
         this.blockchainService = blockchainService;
+        this.auditRepository = auditRepository;
         this.ws = this.gloovConfig.getWeb3Url();
     }
     async execute(pkOrigin, accDestiny, value) {
@@ -24,14 +26,17 @@ class CashReturnUseCases {
                 this.logger.log('CashReturnUseCases execute', `nonce: ${nonce}`);
                 const transaction = await this.blockchainService.transaction(address, nonce, addressReturnAccount, convertWei, '21000', '0', pkAccountReturn, this.ws);
                 this.logger.log('CashReturnUseCases execute', `Transaction hash: ${transaction.transactionHash}`);
+                await this.auditRepository.insert(`Transaction from: ${address} to: ${addressReturnAccount} Result: hash: ${transaction.transactionHash}`, `CashReturnUseCases`, value.toString());
                 return transaction.transactionHash;
             }
             else {
                 this.logger.log('CashReturnUseCases execute', `no tiene balance `);
+                await this.auditRepository.insert(`No tiene balance: from: ${address} to: ${addressReturnAccount}`, `CashReturnUseCases`, value.toString());
                 throw new common_1.BadRequestException("no tiene balance");
             }
         }
         else {
+            await this.auditRepository.insert(`No se permiten transacciones en CEROS from: ${address} to: ${addressReturnAccount}`, `CashReturnUseCases`, value.toString());
             throw new common_1.BadRequestException("No se permiten transacciones en CEROS");
         }
     }

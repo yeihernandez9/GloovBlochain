@@ -2,6 +2,7 @@ import { GloovConfig } from '../../domain/web3/gloov.interface';
 import { ILogger } from '../../domain/logger/logger.interface';
 import { IBlockchainService } from '../../domain/adapters/blockchain.interface';
 import { BadRequestException, NotFoundException } from '@nestjs/common';
+import { AuditRepository } from 'src/domain/repositories/auditRepository.interface';
 
 export class AddTokensChargeBackUseCases {
   ws: string = this.gloovConfig.getWeb3Url();
@@ -9,6 +10,7 @@ export class AddTokensChargeBackUseCases {
     private readonly gloovConfig: GloovConfig,
     private readonly logger: ILogger,
     private readonly blockchainService: IBlockchainService,
+    private readonly auditRepository: AuditRepository
   ) { }
 
   async execute(pkOrigin: string, accDestiny: string, value: number): Promise<any> {
@@ -34,12 +36,15 @@ export class AddTokensChargeBackUseCases {
           this.ws,
         );
         this.logger.log('AddTokensChargeBackUseCases execute', `Transaction hash: ${transaction.transactionHash}`);
+        await this.auditRepository.insert(`Transaction from: ${address} to: ${addressChargeBack} Result: hash: ${transaction.transactionHash}`, `AddTokensChargeBackUseCases`, value.toString());
         return transaction.transactionHash;
       } else {
         this.logger.log('AddTokensChargeBackUseCases execute', `no tiene balance `);
+        await this.auditRepository.insert(`No tiene balance: from: ${address} to: ${addressChargeBack}`, `AddTokensChargeBackUseCases`, value.toString());
         throw new BadRequestException("no tiene balance");
       }
     } else {
+      await this.auditRepository.insert(`No se permiten transacciones en CEROS: from: ${address} to: ${addressChargeBack}`, `AddTokensChargeBackUseCases`, value.toString());
       throw new BadRequestException("No se permiten transacciones en CEROS");
     }
 

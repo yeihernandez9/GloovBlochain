@@ -8,6 +8,7 @@ export class StatusBlockchainUseCases {
         private readonly gloovConfig: GloovConfig,
         private readonly logger: ILogger,
         private readonly blockchainService: IBlockchainService,
+
     ) { }
 
     async execute(): Promise<any> {
