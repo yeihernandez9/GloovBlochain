@@ -7,10 +7,12 @@ import { Transactions } from '../entities/transactions.entity';
 import { DatabaseTodoRepository } from './todo.repository';
 import { DatabaseUserRepository } from './user.repository';
 import { DatabaseBlockchainRepository } from './blockchain.repository'
+import { Audit } from '../entities/audit.entity';
+import { DatabaseAuditRepository } from './audit.repository';
 
 @Module({
-  imports: [TypeOrmConfigModule, TypeOrmModule.forFeature([Todo, User, Transactions])],
-  providers: [DatabaseTodoRepository, DatabaseUserRepository,DatabaseBlockchainRepository],
-  exports: [DatabaseTodoRepository, DatabaseUserRepository,DatabaseBlockchainRepository],
+  imports: [TypeOrmConfigModule, TypeOrmModule.forFeature([Todo, User, Transactions, Audit])],
+  providers: [DatabaseTodoRepository, DatabaseUserRepository, DatabaseBlockchainRepository, DatabaseAuditRepository],
+  exports: [DatabaseTodoRepository, DatabaseUserRepository, DatabaseBlockchainRepository, DatabaseAuditRepository],
 })
-export class RepositoriesModule {}
+export class RepositoriesModule { }

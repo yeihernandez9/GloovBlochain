@@ -1786,6 +1786,11 @@
         "signature": "38e5558d7bf9b579ed1975eb558f5637e01fab5159f5b6c1d6ea09d138b605aa",
         "affectsGlobalScope": false
       },
+      "../database/migrations/1698888724569-table_audit.ts": {
+        "version": "691d65ac3a7a9fc9cc67062481a3a6863fceb5fc3152faa5213ee0ad0031486f",
+        "signature": "ee9383609c7cf16c60b48c966519b064385b585e803a6e09488534d0da1f777b",
+        "affectsGlobalScope": false
+      },
       "../node_modules/@nestjs/common/cache/cache.constants.d.ts": {
         "version": "3346a737f29b700e7c6c2a694973ceb70a738c3ac5212ffbefac8a27048fa8d6",
         "signature": "3346a737f29b700e7c6c2a694973ceb70a738c3ac5212ffbefac8a27048fa8d6",
@@ -4217,12 +4222,12 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/repositories/todo.repository.ts": {
-        "version": "d5c44eeff8d4691254e0bc50a097e8928e36d0282a8da5de5beecc1b5ee0da10",
+        "version": "96e97da7f6c501dff45402a1f970b3e6ff8d4bda77e34759eac009bb3b3342a9",
         "signature": "2bbf3c0193a34dfd59eac8df73806e9ab8e40ce1228c71bae94296be73d848fd",
         "affectsGlobalScope": false
       },
       "../src/infrastructure/repositories/user.repository.ts": {
-        "version": "cb20880b751c8e57716a9ce3bfac8205651138b13604e6a213782aaae2a927fb",
+        "version": "ecf83df204fb87752a0cd66ad1e7036dfd81785a8d993e022543488435858e23",
         "signature": "b9434625372893e71db9fb1389de6cabc66d2b33a5900ec7813c5513267b8938",
         "affectsGlobalScope": false
       },
@@ -4236,8 +4241,28 @@
         "signature": "0b020f9f14cd2e91d2a33e099e1d4f3136dbb48528f2d00149c9e82fc30f28d1",
         "affectsGlobalScope": false
       },
+      "../src/infrastructure/entities/audit.entity.ts": {
+        "version": "cb893522af0f7fc5ce6d9b7edfb2c838621c15f214789f2121e35d7a79e4d514",
+        "signature": "bb5989c540e546702442a49259b8de1d364d9d5fa1aa613ead72c6d3fc393c9c",
+        "affectsGlobalScope": false
+      },
+      "../src/domain/model/audit.ts": {
+        "version": "1d4d3ec253a60b40d928c00da386c50b735ab3d0e3ea39ca24d521b3d71eea8d",
+        "signature": "5a318f79deaf9af71bf8f11bdb00ddf975056f8e1d7a5700660b650a5b0acf22",
+        "affectsGlobalScope": false
+      },
+      "../src/domain/repositories/auditrepository.interface.ts": {
+        "version": "87aecf69f61a4568485f13c3dcde078c206f7ff82fe7c5f0f0f32d468af18895",
+        "signature": "5a5c5c8dda4827312d0c082385bdb65887fb41fd9719364965c0e365ac749f6f",
+        "affectsGlobalScope": false
+      },
+      "../src/infrastructure/repositories/audit.repository.ts": {
+        "version": "a479d3efd8e9066c0ceb83a3b107bf3dc7663a77fded4c5b4f624ed6e7e41d3a",
+        "signature": "692d4efa385accdd5cb540efb5d01353763e88688691087944ef99a2a5142a5d",
+        "affectsGlobalScope": false
+      },
       "../src/infrastructure/repositories/repositories.module.ts": {
-        "version": "e8583acc2361ac1d7d55ff1d409bc6e4bfabb5b516375f1a1dceb5dd4fd8f660",
+        "version": "05eb12c23501e16db0c633f04968804e98d1da657f37cc1bda038e1c0670a1fb",
         "signature": "e0e1ca99ce2c140d0e88bf2d9c352ffccc14bd14a0849b5cf3da19b3b919e089",
         "affectsGlobalScope": false
       },
@@ -4252,12 +4277,12 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/sendtransaction.usecases.ts": {
-        "version": "8b34fcb25f5bb01b8da948a2ce1885de6a0904bbdb4c856e4442548429c25dc9",
-        "signature": "11d2e705fcf3adc387df810319549316811ee1246181faf5e47ae5d5c93d1484",
+        "version": "bbc7560574d5b73803b2378c70d55077cd1461c33f733d97845ea02c4d06b03f",
+        "signature": "6372b2d4586a76ae879b89272ed100e70735519777c9abc70e83c93aefa54a88",
         "affectsGlobalScope": false
       },
       "../src/infrastructure/services/blockchain/blockchain.service.ts": {
-        "version": "b6c95f8abf0d6f23a02bcbb5e8257bdc8089fe3f310722638a11ff2d6cc7bcb6",
+        "version": "601958c995526260de5950fe6d403c2eef38072d8c3acf6cdfa3184a976aa300",
         "signature": "9ba0ebd17c31b250de3b4d4b161070ef05734da49f67b0f205f1d1daaed81644",
         "affectsGlobalScope": false
       },
@@ -4267,38 +4292,38 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/withdrawals.usecases.ts": {
-        "version": "3e3e49ab0b8a5c526b6f04adce1dc49bf401cfd3e44b601af60f8f3ca66cb763",
-        "signature": "ec4b2547cee51a64681385724c34016cbb2330e933da32817a1b92f8358a1f75",
+        "version": "c7f8313f9868dc1ea0de07bac8d8a537924848eb5ca2b63a23a625513f662f1a",
+        "signature": "dfc45b88b28bd16b5df1b53b5450e63e77e66ce65b06c7c2721387724559816c",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/returnuser.usecases.ts": {
-        "version": "a4919812a5d6fd296e7392e0d37cf6a72dcfd38f8cb797debb40a6fe5d60c2a6",
-        "signature": "4fdb9afbf474557dfae28323853258c27621b5c8206579a9d2beeea43569e1b4",
+        "version": "aa6ef1c6634f32b10f5b5f207064f0242f0592e20bee2bae41e98d8656e8b608",
+        "signature": "cedc63c0b7417e6b5abb9fb18851ed85b99dc1a91306aeedb01a3a603d59cbdb",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/cashreturn.usecases.ts": {
-        "version": "208f823026124c543bfe39176b66dbb3e70ed266522079eeed8d3c3eb824ea1d",
-        "signature": "a0aca78b80124006866fd6c502355293ab792ec205567d8f8ca261511948b3b7",
+        "version": "1393fb5e0e96975f51b46e10900779ceeef2756c8b25cbf15221986f32a8cacf",
+        "signature": "0efc14a026b0e6cce5f969330018fa67460e3edd2e091e5ae62b9e7f03222218",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addtokens.usecases.ts": {
-        "version": "1f9513219ffaa780f61facc9b79a003a6299363493e2436067a0c697793e1800",
-        "signature": "fccfaf97c20af65c351ad534fe7f7d375327f6e23a0ba36e3d49e0ac8463cc8c",
+        "version": "887a53f7e8776aa857a10ea3a56ae6d1c4e65e0c742c4b49b01588fbf7ea1259",
+        "signature": "d6fb306c8499d4a5d2e75b06001d0f6b0bfba6eaed5be567547e2a4729ae3e24",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addtokenschargeback.usecases.ts": {
-        "version": "2d41c90d78bf2d4c4e3d1da13af90841709582a2d132af10cc3cdf58fe5ede19",
-        "signature": "d9d315b5495858100d2c49f3410f003b5d950596f5b60c6cab8cec8977dabba5",
+        "version": "2f1bb370c57856fbb48a79b5c26ac368c081a43cbe37aa19b5223b7fef11b423",
+        "signature": "da22f22745d81a059eb9ab70d8c2d51ad384832347df4b7339121dc519e5646a",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addtokensbonds.usecases.ts": {
-        "version": "aaee666b3f9e89178f080bef920dc6a9261f220dc0b67e854b0f88ad5429b61a",
-        "signature": "ca0b0356a5165dc5d7b623b729ad71e93ec3771fb5e80bc426c367a9b7eb4558",
+        "version": "5b947bad7c2aef146d0730d64a77034097edaf7da92c302968ba14d903d44cea",
+        "signature": "d0caab3749bcfcf415d8dc5e1a7d3032a1d77ae49e621fac9d067d1c4c13a7c9",
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/addbounds.usecases.ts": {
-        "version": "4bcfe5740a95d26014d9000afd0ae5db965500db57886bb3c9c5673844df57bd",
-        "signature": "1f41c178f4bfeae5504e9de533dedbfbcba96aeaf8514499e337e3b53420d18a",
+        "version": "7759e78bdf88e2742ee0b0762b0bbd0a2f0581aac2d677dc761e477cf5b6db6c",
+        "signature": "4b18abf300d69e5f619284db49f8dd586f5cff0399f6386106d47ad27d23333c",
         "affectsGlobalScope": false
       },
       "../node_modules/decimal.js/decimal.d.ts": {
@@ -4312,17 +4337,17 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/transittokens.usecases.ts": {
-        "version": "81f49579a7d05849e4390afeaa9efd1e9791158024fb5a50e9e4717e6048dcd8",
+        "version": "be2b01c5c12e09d7c51226993957e0520291f937d0192900f5b47f507fa23c53",
         "signature": "d7b01f5e639e8624cca35ba8419384ca0088d6d4be991919fd9aadeb289e24ad",
         "affectsGlobalScope": false
       },
       "../src/usecases/blockchain/statusblockchain.usecases.ts": {
-        "version": "5ef48a4ad3b6c1a78ac466bf50e6361221473d35cf133d8ed4c0c9401e12a53b",
+        "version": "3ad5683b8a4cf2bf9b43992da3db2e69d5523f79da712d982f2b70403e50b309",
         "signature": "57272c41e0b0ef7a9e1842705de8ed2ad589474cc5ede3fcd7cc3b9859a4c0aa",
         "affectsGlobalScope": false
       },
       "../src/infrastructure/usecases-proxy/usecases-proxy.module.ts": {
-        "version": "cf6ef99e4a8f95307ecd9d1a446735924fff4862b2002a044e8af0eaf35199e9",
+        "version": "4ef4e93d6984bec549cf7af9dd1266fd39ec58e485c8dab111c40e18d3d2fb9c",
         "signature": "4ebcbd64499864b0bd44cf0c3fd0d196b5bdf77502fd29a9c2936c2a16d71b30",
         "affectsGlobalScope": false
       },
@@ -5102,7 +5127,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/controllers/gloov/gloov.dto.ts": {
-        "version": "0b0d10aa5afbcf54cc8d4cb200c3523d15f7b6baafc7d1b5c58f3799fe0a9318",
+        "version": "2fa7f9c19f50be4c43682c03c72d9249f99d2541622c31992577b9fb3cff24ab",
         "signature": "d0a4a96a6471c6cd8a54f10735e01e7110fcaaf9fbf589cf722f3cfd9e1f6669",
         "affectsGlobalScope": false
       },
@@ -5117,7 +5142,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/controllers/gloov/gloov.controller.ts": {
-        "version": "09d376f3ad782cbdf28952781a1fcab16ed6416263e171b70a49101b210bbbbb",
+        "version": "cc75e57d0db45d4af2a8aa835957a8ded25887e57838c3c7063ad5b6156e419e",
         "signature": "83a3e19cbeb7c3160ae507b25d4f3a8813095baa418d4c43c110aade800d71d8",
         "affectsGlobalScope": false
       },
@@ -5161,8 +5186,23 @@
         "signature": "c4305ac3295bc095ac0c26a5639cf0cdc129563f7bec725baed412a70956c02f",
         "affectsGlobalScope": false
       },
+      "../src/domain/audit/audit.interface.ts": {
+        "version": "b31dde6fd24152389eefc78b6571290c23bbcc797bf28c418536881fd7e39a35",
+        "signature": "91ca65d75a1c4cb5a01f7be6ce111e14b568bf2509450448fc771fc5c7026911",
+        "affectsGlobalScope": false
+      },
+      "../src/infrastructure/audit/audit.service.ts": {
+        "version": "5dab99e645385f3ec7047806cefb8629c7d51a248060f3326c93ebf5aeec4c83",
+        "signature": "55c10b90fe423d0456998a7390b2dad374290b9485263b24a7e3efbb60f49e4a",
+        "affectsGlobalScope": false
+      },
+      "../src/infrastructure/audit/audit.module.ts": {
+        "version": "3d82ed9e0ff5787a3cbe08021c055d9d55c4b4692c94ec8d9589214564ce6d16",
+        "signature": "bc1f5f0d2f58eee8802dece506d4c4dbc4e6b36369c8da9a565e5b78259f2138",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "e214b92e3fb6cbec7bbc58b3edb33abb1d662556462557bae0c811cb0a2920b6",
+        "version": "e6eb0d35b6e931de1c001f42cbc5df3d44daa127918a33fec7ee80d44f786777",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -5362,7 +5402,7 @@
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
-        "version": "ded3edd225988ab56eccc644da3cd86c9945ca02c68917dd7a755890b3496beb",
+        "version": "27ed4f97b7945cd83f7cc0e9703d3bb0b86886012a45a2b3add8fe7b1caab645",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -5372,7 +5412,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/config/typeorm/typeorm.config.ts": {
-        "version": "805844fd8c5fc96e47b554cb4670f5ff04b7adf791b4abe10eb3f5a336ce2905",
+        "version": "89d357eb7f839784e203e9e42bcda5435e49523c68618fa422e605f7eb1676a6",
         "signature": "26609a672cfb61968fce39ff554ca997988dfb0b6cdd2108e30e11abe210081c",
         "affectsGlobalScope": false
       },
@@ -5573,6 +5613,9 @@
     },
     "referencedMap": {
       "../database/migrations/1648623447697-adduser.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../database/migrations/1698888724569-table_audit.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
       "../node_modules/@babel/parser/typings/babel-parser.d.ts": [
@@ -9380,6 +9423,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/jwt/index.d.ts",
         "../node_modules/@nestjs/passport/index.d.ts",
+        "../src/infrastructure/audit/audit.module.ts",
         "../src/infrastructure/common/strategies/jwt.strategy.ts",
         "../src/infrastructure/common/strategies/jwtrefresh.strategy.ts",
         "../src/infrastructure/common/strategies/local.strategy.ts",
@@ -9392,11 +9436,22 @@
         "../src/infrastructure/services/jwt/jwt.module.ts",
         "../src/infrastructure/usecases-proxy/usecases-proxy.module.ts"
       ],
+      "../src/domain/repositories/auditrepository.interface.ts": [
+        "../src/domain/model/audit.ts"
+      ],
       "../src/domain/repositories/todorepository.interface.ts": [
         "../src/domain/model/todo.ts"
       ],
       "../src/domain/repositories/userrepository.interface.ts": [
         "../src/domain/model/user.ts"
+      ],
+      "../src/infrastructure/audit/audit.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/infrastructure/audit/audit.service.ts"
+      ],
+      "../src/infrastructure/audit/audit.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/domain/audit/audit.interface.ts"
       ],
       "../src/infrastructure/common/filter/exception.filter.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -9593,6 +9648,9 @@
         "../node_modules/@nestjs/swagger/index.d.ts",
         "../src/domain/model/todo.ts"
       ],
+      "../src/infrastructure/entities/audit.entity.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
       "../src/infrastructure/entities/todo.entity.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
@@ -9618,6 +9676,14 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/logger/logger.interface.ts"
       ],
+      "../src/infrastructure/repositories/audit.repository.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/domain/model/audit.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
+        "../src/infrastructure/entities/audit.entity.ts"
+      ],
       "../src/infrastructure/repositories/blockchain.repository.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
@@ -9629,9 +9695,11 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../src/infrastructure/config/typeorm/typeorm.module.ts",
+        "../src/infrastructure/entities/audit.entity.ts",
         "../src/infrastructure/entities/todo.entity.ts",
         "../src/infrastructure/entities/transactions.entity.ts",
         "../src/infrastructure/entities/user.entity.ts",
+        "../src/infrastructure/repositories/audit.repository.ts",
         "../src/infrastructure/repositories/blockchain.repository.ts",
         "../src/infrastructure/repositories/todo.repository.ts",
         "../src/infrastructure/repositories/user.repository.ts"
@@ -9686,6 +9754,7 @@
         "../src/infrastructure/exceptions/exceptions.module.ts",
         "../src/infrastructure/logger/logger.module.ts",
         "../src/infrastructure/logger/logger.service.ts",
+        "../src/infrastructure/repositories/audit.repository.ts",
         "../src/infrastructure/repositories/blockchain.repository.ts",
         "../src/infrastructure/repositories/repositories.module.ts",
         "../src/infrastructure/repositories/todo.repository.ts",
@@ -9756,30 +9825,35 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/addtokens.usecases.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/addtokensbonds.usecases.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/addtokenschargeback.usecases.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/cashreturn.usecases.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/createaccount.usecases.ts": [
@@ -9801,12 +9875,14 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/sendtransaction.usecases.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/transittokens.usecases.ts": [
@@ -9821,6 +9897,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/todo/addtodo.usecases.ts": [
@@ -9847,6 +9924,9 @@
     },
     "exportedModulesMap": {
       "../database/migrations/1648623447697-adduser.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../database/migrations/1698888724569-table_audit.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
       "../node_modules/@babel/parser/typings/babel-parser.d.ts": [
@@ -13650,11 +13730,17 @@
       "../node_modules/web3-types/lib/commonjs/eth_types.d.ts": [
         "../node_modules/web3-types/lib/commonjs/primitives_types.d.ts"
       ],
+      "../src/domain/repositories/auditrepository.interface.ts": [
+        "../src/domain/model/audit.ts"
+      ],
       "../src/domain/repositories/todorepository.interface.ts": [
         "../src/domain/model/todo.ts"
       ],
       "../src/domain/repositories/userrepository.interface.ts": [
         "../src/domain/model/user.ts"
+      ],
+      "../src/infrastructure/audit/audit.service.ts": [
+        "../src/domain/audit/audit.interface.ts"
       ],
       "../src/infrastructure/common/filter/exception.filter.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -13776,6 +13862,12 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/logger/logger.interface.ts"
       ],
+      "../src/infrastructure/repositories/audit.repository.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/domain/model/audit.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
+        "../src/infrastructure/entities/audit.entity.ts"
+      ],
       "../src/infrastructure/repositories/blockchain.repository.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/domain/repositories/blockchainrepository.interface.ts",
@@ -13832,26 +13924,31 @@
       "../src/usecases/gloov/addbounds.usecases.ts": [
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/addtokens.usecases.ts": [
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/addtokensbonds.usecases.ts": [
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/addtokenschargeback.usecases.ts": [
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/cashreturn.usecases.ts": [
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/createaccount.usecases.ts": [
@@ -13867,11 +13964,13 @@
       "../src/usecases/gloov/returnuser.usecases.ts": [
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/sendtransaction.usecases.ts": [
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/gloov/transittokens.usecases.ts": [
@@ -13885,6 +13984,7 @@
       "../src/usecases/gloov/withdrawals.usecases.ts": [
         "../src/domain/adapters/blockchain.interface.ts",
         "../src/domain/logger/logger.interface.ts",
+        "../src/domain/repositories/auditrepository.interface.ts",
         "../src/domain/web3/gloov.interface.ts"
       ],
       "../src/usecases/todo/addtodo.usecases.ts": [
@@ -13911,6 +14011,7 @@
     },
     "semanticDiagnosticsPerFile": [
       "../database/migrations/1648623447697-adduser.ts",
+      "../database/migrations/1698888724569-table_audit.ts",
       "../node_modules/@babel/parser/typings/babel-parser.d.ts",
       "../node_modules/@babel/types/lib/index.d.ts",
       "../node_modules/@nestjs/common/cache/cache.constants.d.ts",
@@ -14940,17 +15041,22 @@
       "../src/domain/adapters/bcrypt.interface.ts",
       "../src/domain/adapters/blockchain.interface.ts",
       "../src/domain/adapters/jwt.interface.ts",
+      "../src/domain/audit/audit.interface.ts",
       "../src/domain/config/database.interface.ts",
       "../src/domain/config/jwt.interface.ts",
       "../src/domain/exceptions/exceptions.interface.ts",
       "../src/domain/logger/logger.interface.ts",
+      "../src/domain/model/audit.ts",
       "../src/domain/model/auth.ts",
       "../src/domain/model/todo.ts",
       "../src/domain/model/user.ts",
+      "../src/domain/repositories/auditrepository.interface.ts",
       "../src/domain/repositories/blockchainrepository.interface.ts",
       "../src/domain/repositories/todorepository.interface.ts",
       "../src/domain/repositories/userrepository.interface.ts",
       "../src/domain/web3/gloov.interface.ts",
+      "../src/infrastructure/audit/audit.module.ts",
+      "../src/infrastructure/audit/audit.service.ts",
       "../src/infrastructure/common/filter/exception.filter.ts",
       "../src/infrastructure/common/guards/jwtauth.guard.ts",
       "../src/infrastructure/common/guards/jwtrefresh.guard.ts",
@@ -14979,6 +15085,7 @@
       "../src/infrastructure/controllers/todo/todo.controller.ts",
       "../src/infrastructure/controllers/todo/todo.dto.ts",
       "../src/infrastructure/controllers/todo/todo.presenter.ts",
+      "../src/infrastructure/entities/audit.entity.ts",
       "../src/infrastructure/entities/todo.entity.ts",
       "../src/infrastructure/entities/transactions.entity.ts",
       "../src/infrastructure/entities/user.entity.ts",
@@ -14986,6 +15093,7 @@
       "../src/infrastructure/exceptions/exceptions.service.ts",
       "../src/infrastructure/logger/logger.module.ts",
       "../src/infrastructure/logger/logger.service.ts",
+      "../src/infrastructure/repositories/audit.repository.ts",
       "../src/infrastructure/repositories/blockchain.repository.ts",
       "../src/infrastructure/repositories/repositories.module.ts",
       "../src/infrastructure/repositories/todo.repository.ts",

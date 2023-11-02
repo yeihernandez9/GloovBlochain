@@ -21,6 +21,7 @@ const local_strategy_1 = require("./infrastructure/common/strategies/local.strat
 const jwt_strategy_1 = require("./infrastructure/common/strategies/jwt.strategy");
 const jwtRefresh_strategy_1 = require("./infrastructure/common/strategies/jwtRefresh.strategy");
 const blockchain_module_1 = require("./infrastructure/services/blockchain/blockchain.module");
+const audit_module_1 = require("./infrastructure/audit/audit.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -38,6 +39,7 @@ AppModule = __decorate([
             jwt_module_1.JwtModule,
             environment_config_module_1.EnvironmentConfigModule,
             blockchain_module_1.BlockchainModule,
+            audit_module_1.AuditModule,
         ],
         providers: [local_strategy_1.LocalStrategy, jwt_strategy_1.JwtStrategy, jwtRefresh_strategy_1.JwtRefreshTokenStrategy],
     })
