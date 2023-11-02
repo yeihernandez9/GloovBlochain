@@ -4227,7 +4227,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/repositories/user.repository.ts": {
-        "version": "ecf83df204fb87752a0cd66ad1e7036dfd81785a8d993e022543488435858e23",
+        "version": "4749049096cf13e55c5506d2b1e5b3beb66f189466dc190b6dbd95f54a774d03",
         "signature": "b9434625372893e71db9fb1389de6cabc66d2b33a5900ec7813c5513267b8938",
         "affectsGlobalScope": false
       },
@@ -4282,7 +4282,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/services/blockchain/blockchain.service.ts": {
-        "version": "601958c995526260de5950fe6d403c2eef38072d8c3acf6cdfa3184a976aa300",
+        "version": "59b60a8a60ab34f342e2e987038a041ad9e2f5f8cd001a6912170283c759da7a",
         "signature": "9ba0ebd17c31b250de3b4d4b161070ef05734da49f67b0f205f1d1daaed81644",
         "affectsGlobalScope": false
       },
@@ -4292,7 +4292,7 @@
         "affectsGlobalScope": false
       },
       "../src/usecases/gloov/withdrawals.usecases.ts": {
-        "version": "c7f8313f9868dc1ea0de07bac8d8a537924848eb5ca2b63a23a625513f662f1a",
+        "version": "e151ee2744da77336fee32bde3f631c334a27fe323c3c76dd946794aa48c7fac",
         "signature": "dfc45b88b28bd16b5df1b53b5450e63e77e66ce65b06c7c2721387724559816c",
         "affectsGlobalScope": false
       },
@@ -5127,7 +5127,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/controllers/gloov/gloov.dto.ts": {
-        "version": "2fa7f9c19f50be4c43682c03c72d9249f99d2541622c31992577b9fb3cff24ab",
+        "version": "abfaad5b22372489f51b272aa1a4c860e7514cc12878b33e71f21215a58ddd15",
         "signature": "d0a4a96a6471c6cd8a54f10735e01e7110fcaaf9fbf589cf722f3cfd9e1f6669",
         "affectsGlobalScope": false
       },
@@ -5142,7 +5142,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/controllers/gloov/gloov.controller.ts": {
-        "version": "cc75e57d0db45d4af2a8aa835957a8ded25887e57838c3c7063ad5b6156e419e",
+        "version": "36a15979a29930083a19935e405a2f61c5a030344d4285cc87f8a055ba8f688d",
         "signature": "83a3e19cbeb7c3160ae507b25d4f3a8813095baa418d4c43c110aade800d71d8",
         "affectsGlobalScope": false
       },
@@ -5412,7 +5412,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/config/typeorm/typeorm.config.ts": {
-        "version": "89d357eb7f839784e203e9e42bcda5435e49523c68618fa422e605f7eb1676a6",
+        "version": "127b1459e051726d54bec233e7500ae8a4e06855600182295ddfe513ef19e88e",
         "signature": "26609a672cfb61968fce39ff554ca997988dfb0b6cdd2108e30e11abe210081c",
         "affectsGlobalScope": false
       },

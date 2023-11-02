@@ -10,7 +10,6 @@ export class GetBalanceDto {
 
 export class SendTransactinoDto {
   @ApiProperty({ required: true })
-  @IsString()
   readonly pkOrigin: string;
 
   @ApiProperty({ required: true })

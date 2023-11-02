@@ -25,7 +25,6 @@ class SendTransactinoDto {
 }
 __decorate([
     swagger_1.ApiProperty({ required: true }),
-    class_validator_1.IsString(),
     __metadata("design:type", String)
 ], SendTransactinoDto.prototype, "pkOrigin", void 0);
 __decorate([
