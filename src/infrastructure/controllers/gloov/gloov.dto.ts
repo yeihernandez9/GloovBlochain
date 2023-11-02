@@ -13,12 +13,8 @@ export class SendTransactinoDto {
   readonly pkOrigin: string;
 
   @ApiProperty({ required: true })
-  @IsNotEmpty()
-  @IsString()
   readonly accDestiny: string;
 
   @ApiProperty({ required: true })
-  @IsNotEmpty()
-  @IsNumber()
   readonly value: number;
 }

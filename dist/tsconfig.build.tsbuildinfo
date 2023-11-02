@@ -4227,7 +4227,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/repositories/user.repository.ts": {
-        "version": "4749049096cf13e55c5506d2b1e5b3beb66f189466dc190b6dbd95f54a774d03",
+        "version": "38028565b94527fc75aa01cc62b38ad889ba19428c38394060f2a02d97a3a463",
         "signature": "b9434625372893e71db9fb1389de6cabc66d2b33a5900ec7813c5513267b8938",
         "affectsGlobalScope": false
       },
@@ -4282,7 +4282,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/services/blockchain/blockchain.service.ts": {
-        "version": "59b60a8a60ab34f342e2e987038a041ad9e2f5f8cd001a6912170283c759da7a",
+        "version": "176d4c09ef5f787dc080f054151909170e9a7b266c15ddd0ebdb4c6d9a2a8271",
         "signature": "9ba0ebd17c31b250de3b4d4b161070ef05734da49f67b0f205f1d1daaed81644",
         "affectsGlobalScope": false
       },
@@ -5142,7 +5142,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/controllers/gloov/gloov.controller.ts": {
-        "version": "36a15979a29930083a19935e405a2f61c5a030344d4285cc87f8a055ba8f688d",
+        "version": "e0e604cee43d3b986fe04b6de3589d936b6408bba0eba8004ea072a76f02a398",
         "signature": "83a3e19cbeb7c3160ae507b25d4f3a8813095baa418d4c43c110aade800d71d8",
         "affectsGlobalScope": false
       },
@@ -5402,7 +5402,7 @@
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
-        "version": "27ed4f97b7945cd83f7cc0e9703d3bb0b86886012a45a2b3add8fe7b1caab645",
+        "version": "ded3edd225988ab56eccc644da3cd86c9945ca02c68917dd7a755890b3496beb",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -5412,7 +5412,7 @@
         "affectsGlobalScope": false
       },
       "../src/infrastructure/config/typeorm/typeorm.config.ts": {
-        "version": "127b1459e051726d54bec233e7500ae8a4e06855600182295ddfe513ef19e88e",
+        "version": "4633c97a13afb70e7b99817fae2417d40ebc325108c8b4d926b056d210a53ca9",
         "signature": "26609a672cfb61968fce39ff554ca997988dfb0b6cdd2108e30e11abe210081c",
         "affectsGlobalScope": false
       },
