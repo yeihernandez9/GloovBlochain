@@ -36,7 +36,7 @@ class AddTokensBondsUseCases {
             }
         }
         else {
-            await this.auditRepository.insert(`No se permiten transacciones en CEROS from: ${address} to: ${accDestiny}`, `AddTokensUseCases`, value.toString());
+            await this.auditRepository.insert(`No se permiten transacciones en CEROS from: ${address} to: ${accDestiny}`, `AddTokensBondsUseCases`, value.toString());
             throw new common_1.BadRequestException("No se permiten transacciones en CEROS");
         }
     }

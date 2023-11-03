@@ -14,7 +14,7 @@ export class SendTransactionUseCases {
   ) { }
 
   async execute(pkOrigin: string, accDestiny: string, value: number): Promise<any> {
-
+    console.log("value: ", value)
     const address = await this.blockchainService.getAddressPublic(pkOrigin, this.ws);
     if (address != accDestiny) {
       const balance = await this.blockchainService.balances(address, this.ws);
