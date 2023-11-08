@@ -13,7 +13,7 @@ class GetBalanceUseCases {
             const ws = this.gloovConfig.getWeb3Url();
             const balance = await this.blockchainService.balances(address, ws);
             this.logger.log('getBalanceUseCases execute', `balance: ${balance}`);
-            return parseFloat(balance.toString());
+            return parseFloat(balance.toString()).toFixed(2);
         }
         catch (error) {
             this.logger.error('Error al obtener el balance:', error);
